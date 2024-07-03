@@ -285,7 +285,7 @@
      requestAnimationFrame(raf);
 
      ScrollTrigger.refresh();
-     
+
    }
 
 
@@ -295,7 +295,7 @@
 
  function initLenis() {
    scroll = new Lenis({
-     duration: 1.2,
+     duration: 1.25,
    })
 
    scroll.on('scroll', ScrollTrigger.update);
@@ -556,12 +556,6 @@
  }
 
 
- // function initializeJarallaxScrolling() {
- //   jarallax(document.querySelectorAll('.jarallax'), {
- //     speed: 0.6,
- //   });
- // }
-
 
 
  function scrollDirection() {
@@ -626,432 +620,596 @@
      "(max-width: 760px)": function () {
 
 
-      const gebiet1 = document.querySelector(".gebiet-ct:nth-of-type(1)");
-      const gebiet2 = document.querySelector(".gebiet-ct:nth-of-type(2)");
-      const gebiet3 = document.querySelector(".gebiet-ct:nth-of-type(3)");
-      const gebiet4 = document.querySelector(".gebiet-ct:nth-of-type(4)");
-      const gebiet5 = document.querySelector(".gebiet-ct:nth-of-type(5)");
-      const gebiet6 = document.querySelector(".gebiet-ct:nth-of-type(6)");
+       const gebiet1 = document.querySelector(".gebiet-ct:nth-of-type(1)");
+       const gebiet2 = document.querySelector(".gebiet-ct:nth-of-type(2)");
+       const gebiet3 = document.querySelector(".gebiet-ct:nth-of-type(3)");
+       const gebiet4 = document.querySelector(".gebiet-ct:nth-of-type(4)");
+       const gebiet5 = document.querySelector(".gebiet-ct:nth-of-type(5)");
+       const gebiet6 = document.querySelector(".gebiet-ct:nth-of-type(6)");
 
-      const tl = gsap.timeline({
-        defaults: {
-          ease: "none"
-        }
-      });
-      gsap.set(gebiet1, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
+       const tl = gsap.timeline({
+         defaults: {
+           ease: "none"
+         }
+       });
+       gsap.set(gebiet1, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
 
-      gsap.set(gebiet2, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
+       gsap.set(gebiet2, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
 
-      gsap.set(gebiet3, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
+       gsap.set(gebiet3, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
 
-      gsap.set(gebiet4, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
+       gsap.set(gebiet4, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
 
-      gsap.set(gebiet5, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
+       gsap.set(gebiet5, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
 
-      gsap.set(gebiet6, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
+       gsap.set(gebiet6, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
 
-      tl.to(gebiet1, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, 0)
-        .to(gebiet2, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, 0.166)
-        .to(gebiet3, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, .333)
-        .to(gebiet4, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, .5)
-        .to(gebiet5, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, .666)
-        .to(gebiet6, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, .833);
+       tl.to(gebiet1, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, 0)
+         .to(gebiet2, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, 0.166)
+         .to(gebiet3, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, .333)
+         .to(gebiet4, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, .5)
+         .to(gebiet5, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, .666)
+         .to(gebiet6, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, .833);
 
-      ScrollTrigger.create({
-        trigger: ".sec-4-scroll-wrap",
-        start: "top 30%",
-        end: "bottom 70%",
-        scrub: true,
-        animation: tl,
-      });
+       ScrollTrigger.create({
+         trigger: ".sec-4-scroll-wrap",
+         start: "top 30%",
+         end: "bottom 70%",
+         scrub: true,
+         animation: tl,
+       });
 
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".sec-5-scroll-wrap",
-          start: "top bottom",
-          end: "top center",
-          scrub: true 
-        }
-      })
-      .to('.sec-5 .lines-ct', {
-        width: "40.98rem",
-        autoAlpha: 1,
-      });
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top bottom",
+             end: "top center",
+             scrub: true
+           }
+         })
+         .to('.sec-5 .lines-ct', {
+           width: "40.98rem",
+           autoAlpha: 1,
+         });
 
-    gsap.timeline({
-        scrollTrigger: {
-          trigger: ".sec-5-scroll-wrap",
-          start: "top+=75% center",
-          end: "bottom center",
-          scrub: true 
-        }
-      })
-      .to('.sec-5 .lines-ct', {
-        autoAlpha: 0,
-        y: "-10vh"
-      });
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".sec-5-scroll-wrap",
-          start: "top center",
-          end: "top+=30% center",
-          scrub: true, 
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top+=75% center",
+             end: "bottom center",
+             scrub: true
+           }
+         })
+         .to('.sec-5 .lines-ct', {
+           autoAlpha: 0,
+           y: "-10vh"
+         });
 
-        }
-      })
-      .from('.usp-ct.one span', {
-        opacity: 0,
-        yPercent: 200,
-        stagger: 0.05, // Versatz zwischen den Animationen der einzelnen Elemente
-      })
-      .to('.usp-ct.one span', {
-        opacity: 0,
-        yPercent: -200,
-        stagger: 0.05, // Versatz zwischen den Animationen der einzelnen Elemente
-      })
-      .from('.sec-5 .lines-ct .line.one .line-inner', {
-        width: 0,
-      }, 0);
+       ///USP Lines Mobile Start
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top center",
+             end: "top+=27.5% center",
+             scrub: true,
 
-    gsap.timeline({
-        scrollTrigger: {
-          trigger: ".sec-5-scroll-wrap",
-          start: "top+=25% center",
-          end: "top+=55% center",
-          scrub: true, 
-        }
-      })
-      .from('.usp-ct.two span', {
-        opacity: 0,
-        yPercent: 200,
-        stagger: 0.05, // Versatz zwischen den twon der einzelnen Elemente
-      })
-      .to('.usp-ct.two span', {
-        opacity: 0,
-        yPercent: -200,
-        stagger: 0.05, // Versatz zwischen den Animationen der einzelnen Elemente
-      })
-      .from('.sec-5 .lines-ct .line.two .line-inner', {
-        width: 0,
-      }, 0);
+           }
+         })
+         .from('.usp-ct.one span', {
+           opacity: 0,
+           y: "17rem",
+           stagger: 0.05,
+         })
+         .to('.usp-ct.one span', {
+           opacity: 0,
+           y: "-17rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.one .line-inner', {
+           width: 0,
+         }, 0);
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".sec-5-scroll-wrap",
-          start: "top+=50% center",
-          end: "top+=80% center",
-          scrub: true, 
-        }
-      })
-      .from('.usp-ct.three span', {
-        opacity: 0,
-        yPercent: 200,
-        stagger: 0.05, // Versatz zwischen den threen der einzelnen Elemente
-      })
-      .to('.usp-ct.three span', {
-        opacity: 0,
-        yPercent: -200,
-        stagger: 0.05, // Versatz zwischen den Animationen der einzelnen Elemente
-      })
-      .from('.sec-5 .lines-ct .line.three .line-inner', {
-        width: 0,
-      }, 0);
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top+=25% center",
+             end: "top+=52.5% center",
+             scrub: true,
+           }
+         })
+         .from('.usp-ct.two span', {
+           opacity: 0,
+           y: "17rem",
+           stagger: 0.05,
+         })
+         .to('.usp-ct.two span', {
+           opacity: 0,
+           y: "-17rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.two .line-inner', {
+           width: 0,
+         }, 0);
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".sec-5-scroll-wrap",
-          start: "top+=75% center",
-          end: "bottom center",
-          scrub: true, 
-        }
-      })
-      .from('.usp-ct.four span', {
-        opacity: 0,
-        yPercent: 200,
-        stagger: 0.05, // Versatz zwischen den fourn der einzelnen Elemente
-      })
-      .to('.usp-ct.four span', {
-        opacity: 0,
-        yPercent: -200,
-        stagger: 0.05, // Versatz zwischen den Animationen der einzelnen Elemente
-      })
-      .from('.sec-5 .lines-ct .line.four .line-inner', {
-        width: 0,
-      }, 0);
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top+=50% center",
+             end: "top+=77.5% center",
+             scrub: true,
+           }
+         })
+         .from('.usp-ct.three span', {
+           opacity: 0,
+           y: "17rem",
+           stagger: 0.05, // Versatz zwischen den threen der einzelnen Elemente
+         })
+         .to('.usp-ct.three span', {
+           opacity: 0,
+           y: "-17rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.three .line-inner', {
+           width: 0,
+         }, 0);
+
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top+=72.5% center",
+             end: "bottom center",
+             scrub: true,
+           }
+         })
+         .from('.usp-ct.four span', {
+           opacity: 0,
+           y: "17rem",
+           stagger: 0.05, // Versatz zwischen den fourn der einzelnen Elemente
+         })
+         .to('.usp-ct.four span', {
+           opacity: 0,
+           y: "-17rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.four .line-inner', {
+           width: 0,
+         }, 0);
+       ///USP Lines Mobile End
+
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top top",
+             end: "bottom top",
+             scrub: 2,
+           }
+         })
+         .to('.gradient-ct.blue', {
+           left: "50%",
+           top: "35%",
+
+         })
+         .to('.gradient-ct.blue', {
+           left: "-15%",
+           top: "30%",
+         })
+         .to('.gradient-ct.pink', {
+           left: "25%",
+           top: "50%",
+
+         }, 0)
+         .to('.gradient-ct.pink', {
+           left: "-10%",
+           top: "50%",
+         })
+
      },
      ///GSAP  Mobile END
 
      ///GSAP  Desktop
      "(min-width: 760px)": function () {
-      
-      const gebiet1 = document.querySelector(".gebiet-ct:nth-of-type(1)");
-      const gebiet2 = document.querySelector(".gebiet-ct:nth-of-type(2)");
-      const gebiet3 = document.querySelector(".gebiet-ct:nth-of-type(3)");
-      const gebiet4 = document.querySelector(".gebiet-ct:nth-of-type(4)");
-      const gebiet5 = document.querySelector(".gebiet-ct:nth-of-type(5)");
-      const gebiet6 = document.querySelector(".gebiet-ct:nth-of-type(6)");
 
-      const tl = gsap.timeline({
-        defaults: {
-          ease: "none"
+       const gebiet1 = document.querySelector(".gebiet-ct:nth-of-type(1)");
+       const gebiet2 = document.querySelector(".gebiet-ct:nth-of-type(2)");
+       const gebiet3 = document.querySelector(".gebiet-ct:nth-of-type(3)");
+       const gebiet4 = document.querySelector(".gebiet-ct:nth-of-type(4)");
+       const gebiet5 = document.querySelector(".gebiet-ct:nth-of-type(5)");
+       const gebiet6 = document.querySelector(".gebiet-ct:nth-of-type(6)");
+
+       const tl = gsap.timeline({
+         defaults: {
+           ease: "none"
+         }
+       });
+       gsap.set(gebiet1, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
+
+       gsap.set(gebiet2, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
+
+       gsap.set(gebiet3, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
+
+       gsap.set(gebiet4, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
+
+       gsap.set(gebiet5, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
+
+       gsap.set(gebiet6, {
+         motionPath: {
+           path: "#motionPath",
+           align: "#motionPath",
+           alignOrigin: [0.5, 0.5],
+           autoRotate: true,
+           start: 0,
+           end: 1,
+         }
+       });
+
+       tl.to(gebiet1, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, 0)
+         .to(gebiet2, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, 0.05)
+         .to(gebiet3, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, 0.1)
+         .to(gebiet4, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, 0.15)
+         .to(gebiet5, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, .2)
+         .to(gebiet6, {
+           motionPath: {
+             path: "#motionPath",
+             align: "#motionPath",
+             alignOrigin: [0.5, 0.5],
+             autoRotate: true,
+             start: 1,
+             end: 0,
+           },
+           immediateRender: true,
+         }, .25);
+
+       ScrollTrigger.create({
+         trigger: ".sec-4-scroll-wrap",
+         start: "top bottom+=40%",
+         end: "bottom top-=40%",
+         scrub: true,
+         animation: tl,
+       });
+
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top center",
+             end: "top top",
+             scrub: true
+           }
+         })
+         .to('.sec-5 .lines-ct', {
+           height: "12.76rem",
+           autoAlpha: 1,
+         });
+
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "bottom bottom",
+             end: "bottom center",
+             scrub: .5,
+           }
+         })
+         .to('.sec-5 .lines-ct', {
+           autoAlpha: 0,
+           scaleY: "0",
+         });
+       ///USP Lines Desktop Start
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top center",
+             end: "top+=27.5% center",
+             scrub: true,
+
+           }
+         })
+         .from('.usp-ct.one span', {
+           opacity: 0,
+           y: "6rem",
+           stagger: 0.05,
+         })
+         .to('.usp-ct.one span', {
+           opacity: 0,
+           y: "-6rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.one .line-inner', {
+           scaleY: 0,
+         }, 0);
+
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top+=25% center",
+             end: "top+=52.5% center",
+             scrub: true,
+           }
+         })
+         .from('.usp-ct.two span', {
+           opacity: 0,
+           y: "6rem",
+           stagger: 0.05,
+         })
+         .to('.usp-ct.two span', {
+           opacity: 0,
+           y: "-6rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.two .line-inner', {
+           height: 0,
+         }, 0);
+
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top+=50% center",
+             end: "top+=77.5% center",
+             scrub: true,
+           }
+         })
+         .from('.usp-ct.three span', {
+           opacity: 0,
+           y: "6rem",
+           stagger: 0.05, // Versatz zwischen den threen der einzelnen Elemente
+         })
+         .to('.usp-ct.three span', {
+           opacity: 0,
+           y: "-6rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.three .line-inner', {
+           height: 0,
+         }, 0);
+
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-5-scroll-wrap",
+             start: "top+=72.5% center",
+             end: "bottom center",
+             scrub: true,
+           }
+         })
+         .from('.usp-ct.four span', {
+           opacity: 0,
+           y: "6rem",
+           stagger: 0.05, // Versatz zwischen den fourn der einzelnen Elemente
+         })
+         .to('.usp-ct.four span', {
+           opacity: 0,
+           y: "-6rem",
+           stagger: 0.05,
+         })
+         .from('.sec-5 .lines-ct .line.four .line-inner', {
+           height: 0,
+         }, 0);
+       ///USP Lines Desktop End
+       gsap.timeline({
+        scrollTrigger: {
+          trigger: ".sec-5-scroll-wrap",
+          start: "top top",
+          end: "bottom top",
+          scrub: 2,
         }
-      });
-      gsap.set(gebiet1, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
+      })
+      .to('.gradient-ct.blue', {
+        left: "55%",
+        top: "10%",
+      })
+      .to('.gradient-ct.pink', {
+        left: "40%",
+        top: "35%",
 
-      gsap.set(gebiet2, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
-
-      gsap.set(gebiet3, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
-
-      gsap.set(gebiet4, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
-
-      gsap.set(gebiet5, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
-
-      gsap.set(gebiet6, {
-        motionPath: {
-          path: "#motionPath",
-          align: "#motionPath",
-          alignOrigin: [0.5, 0.5],
-          autoRotate: true,
-          start: 0,
-          end: 1,
-        }
-      });
-
-      tl.to(gebiet1, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, 0)
-        .to(gebiet2, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, 0.05)
-        .to(gebiet3, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, 0.1)
-        .to(gebiet4, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, 0.15)
-        .to(gebiet5, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, .2)
-        .to(gebiet6, {
-          motionPath: {
-            path: "#motionPath",
-            align: "#motionPath",
-            alignOrigin: [0.5, 0.5],
-            autoRotate: true,
-            start: 1,
-            end: 0,
-          },
-          immediateRender: true,
-        }, .25);
-
-      ScrollTrigger.create({
-        trigger: ".sec-4-scroll-wrap",
-        start: "top bottom+=40%",
-        end: "bottom top-=40%",
-        scrub: true,
-        animation: tl,
-      });
+      }, 0)
 
      },
      ///GSAP  Desktop END
@@ -1164,17 +1322,26 @@
          }
        });
 
-         gsap.from(".einsatzgebiete-title", {
-          scale: ".8",
-          opacity: .5,
-          duration: 3,
-          ease: "Expo.easeOut",
-          scrollTrigger: {
-            trigger: ".einsatzgebiete-title",
-            start: "top bottom",
-            toggleActions: "play none none reverse",
-          }
-        });
+       gsap.from(".einsatzgebiete-title", {
+         scale: ".8",
+         opacity: .5,
+         duration: 3,
+         ease: "Expo.easeOut",
+         scrollTrigger: {
+           trigger: ".einsatzgebiete-title",
+           start: "top bottom",
+           toggleActions: "play none none reverse",
+         }
+       });
+       gsap.timeline({
+         scrollTrigger: {
+           trigger: ".sec-4-scroll-wrap",
+           start: "top center",
+           end: "top top",
+           scrub: 1,
+         }
+       })
+
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-4-scroll-wrap",
@@ -1184,10 +1351,52 @@
            }
          })
          .from('.sec-4-scroll-wrap .bg picture', {
-           scale: "1.3",
+           scale: "1.4",
+         });
+       gsap.timeline({
+           scrollTrigger: {
+             trigger: ".sec-4-scroll-wrap",
+             start: "bottom bottom",
+             end: "bottom top",
+             scrub: true,
+           }
          })
-        ;
+         .to('.sec-4-scroll-wrap .bg picture', {
+           y: "50%",
+         })
+         .to('.sec-4-scroll-wrap .einsatzgebiete-title', {
+           y: "25vh",
+           opacity: 0,
+         }, 0);
 
+         gsap.timeline({
+          scrollTrigger: {
+            trigger: ".sec-5-inner",
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+          }
+        })
+        .from('.sec-5 .gradients-wrapper', {
+          autoAlpha: "0",
+          pointerEvents: "none",
+          scale: "0",
+          y: "-100%",
+        });
+
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: ".sec-5-scroll-wrap",
+            start: "bottom bottom",
+            end: "bottom top",
+            scrub: true,
+          }
+        })
+        .to('.sec-5 .gradients-wrapper', {
+          autoAlpha: "0",
+          pointerEvents: "none",
+          scale: "0",
+        });
 
      }
      // GSAP All END
@@ -1220,10 +1429,10 @@
  // }
 
  function initScrollToAnchorLenis() {
-  $("[data-anchor-target]").click(function() {
+   $("[data-anchor-target]").click(function () {
      let targetScrollToAnchorLenis = $(this).attr('data-anchor-target');
-     scroll.scrollTo(targetScrollToAnchorLenis,{
-        duration: 1.2,
-      });
-  });
-}
+     scroll.scrollTo(targetScrollToAnchorLenis, {
+       duration: 1.2,
+     });
+   });
+ }

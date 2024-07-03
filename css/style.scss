@@ -1080,14 +1080,14 @@ main .line.standard {
 
     &.blue {
         background: $blue;
-        background: radial-gradient(circle at 50% 50%, rgba($blue,.3) 0%, rgba($blue,0) 66.5%);
+        background: radial-gradient(circle at 50% 50%, rgba($blue,.3) 0%, rgba($blue,0) 60%);
         animation: float 20s infinite;
 
     }
 
     &.pink {
         background: $pink;
-        background: radial-gradient(circle, rgba($pink,.3) 0%, rgba($pink,0) 66.5%);
+        background: radial-gradient(circle, rgba($pink,.3) 0%, rgba($pink,0) 60%);
         animation: floattwo 30s infinite;
 
     }
@@ -2008,7 +2008,17 @@ $large-branding-width: 3.18rem;
     position: relative;
     overflow: hidden;
     z-index: 2;
-
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 10vh;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba($dark, 0) 0%, rgba($dark, 1) 100%);
+        opacity: 1;
+        z-index: 4;
+    }
     @media (max-width: $large) {
         &:before {
             content: '';
@@ -2018,9 +2028,10 @@ $large-branding-width: 3.18rem;
             bottom: 0;
             left: 0;
             background: linear-gradient(180deg, rgba($dark, 0) 0%, rgba($dark, 1) 100%);
-            opacity: .75;
+            opacity: .35;
             z-index: 3;
         }
+       
     }
 
     .claim {
@@ -2480,9 +2491,9 @@ main {
                     margin-inline: auto;
                     line-height: 1em;
                     @media (min-width: $large) {
+                        font-size: 7.97rem;
                         top: 80%;
 
-                        font-size: 7.97rem;
                     }
                 }
             }
@@ -2593,7 +2604,7 @@ main {
                     }
                     &:after {
                         bottom: 0;
-                        background: linear-gradient(0deg, rgba($dark,1) 0%, rgba($dark,0) 100%);
+                        background: linear-gradient(0deg, rgba($dark,.8) 0%, rgba($dark,0) 100%);
                     }
                 picture {
                     height: 100%;
@@ -2608,10 +2619,10 @@ main {
     }
     .sec-5 {
         .sec-5-scroll-wrap {
-            height: 300vh;
+            height: 350vh;
 
             @media (min-width: $large) {
-                height: 400vh;
+                height: 450vh;
             }
 
             .sec-5-inner {
@@ -2619,6 +2630,40 @@ main {
                 top: 0;
                 height: 100vh;
                 width: 100%;
+                .gradients-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    transform-origin: 75%;
+                    .gradient-ct {
+                        width: 57.5rem;
+                        aspect-ratio: 1/1;
+                        position: absolute;
+                        @media (min-width: $large) {
+                            width: 34.06rem;
+                        }
+                        &.blue {
+                            left: -15%;
+                            top: 40%;
+                            @media (min-width: $large) {
+                                left: 5%;
+                                top: 28%;
+                            }
+                        }
+                        &.pink {
+                            left: 18%;
+                            top: 50%;
+                            @media (min-width: $large) {
+                                left: 16%;
+                                top: 35%;
+                            }
+                        }
+                    }
+                }
                 .text-ct {
                     position: fixed;
                     top: 0;
@@ -2635,6 +2680,9 @@ main {
                             left: 50%;
                             transform: translate(-50%, -50%);
                             width: calc(100% - $base-gap * 2);
+                            @media (min-width: $large) {
+                                width: calc(100% - $large-base-gap * 2);                            
+                            }
                             // &:not(.four) {
                             //     display: none;
                             // }
@@ -2642,26 +2690,40 @@ main {
                                 display: block;
                                 line-height: 1em;
                                 &:not(.serif) {
-                                    font-size: 8.02rem;
+                                    font-size: 8.5rem;
                                     @extend %display-font;
+                                    @media (min-width: $large) {
+                                        font-size: 5.83rem;
+                                    }
                                 }
                                 &.serif {
                                     font-family: $serif-font-display;
                                     font-style: italic;
                                     font-size: 5.46rem;
-    
+                                    @media (min-width: $large) {
+                                        font-size: 2.81rem;
+                                    }
                                 }
                             }
                             &.one {
                                 span {
                                     &.serif {
                                         padding-left: 17.21rem;
+                                        @media (min-width: $large) {
+                                            padding-left: 29.69rem;
+                                        }
                                     }
                                     &:nth-of-type(2) {
                                         padding-left: 7.92rem;
+                                        @media (min-width: $large) {
+                                            padding-left: 20.21rem;
+                                        }
                                     }
                                     &:nth-of-type(3) {
                                         padding-left: 22.13rem;
+                                        @media (min-width: $large) {
+                                            padding-left: 31.61rem;
+                                        }
                                     }
                                     
                                 }
@@ -2670,43 +2732,82 @@ main {
                                 span {
                                     &.serif {
                                         padding-left: 18.85rem;
+                                        @media (min-width: $large) {
+                                            padding-left: 31.61rem;
+                                        }
                                     }
                                     &:nth-of-type(2) {
                                         padding-left: 18.85rem;
-                                    }                                    
+                                        
+                                        @media (min-width: $large) {
+                                            padding-left: 31.61rem;
+                                        }
+                                    }    
+                                    &:nth-of-type(3) {
+                                        padding-left: 0;
+                                        @media (min-width: $large) {
+                                            padding-left: 15.63rem;
+                                        }
+                                    }                                   
                                 }
                             }
                             &.three {
                                 span {
                                     &.serif {
+                                        @media (min-width: $large) {
+                                            padding-left: 15.31rem;
+                                        }
                                     }
                                     &:nth-of-type(2) {
+                                        @media (min-width: $large) {
+                                            padding-left: 15.31rem;
+                                        }
                                     }   
                                     &:nth-of-type(3) {
                                         padding-left: 16.85rem;
+                                        @media (min-width: $large) {
+                                            padding-left: 29.01rem;
+                                        }
                                     }  
                                     &:nth-of-type(4) {
                                         padding-left: 51.54rem;
+                                        @media (min-width: $large) {
+                                            padding-left: 51.88rem;
+                                        }
                                     }                                   
                                 }
                             }
                             &.four {
                                 span {
                                     &:not(.serif) {
-                                        font-size: 8.12rem;
+                                        @media (max-width: $large) {
+                                            font-size: 8.12rem;
+                                        }
+                                      
                                     }
                                     &.serif {
+                                        @media (min-width: $large) {
+                                            padding-left: 14.37rem;
+                                        }
                                     }
                                     &:nth-of-type(2) {
+                                        @media (min-width: $large) {
+                                            padding-left: 14.37rem;
+                                        }
                                     }   
                                     &:nth-of-type(3) {
                                         text-align: right;
+                                        @media (min-width: $large) {
+                                            text-align: center;
+                                            padding-left: 51.61rem;
+                                        }
                                     }  
                                                                     
                                 }
                             }
                        
                     }
+                   
                 }
             }
         }
@@ -2727,8 +2828,8 @@ main {
                 top: 50%;
                 transform: translate(0, -50%);
                 flex-flow: column;
-                gap: $large-font-size;
-                left: 9.74rem;
+                gap: 0.78rem;
+                left: 2.81rem;
                 width: 1px !important;
                 height: 0;
             }
@@ -2752,6 +2853,10 @@ main {
                     width: 100%;
                     height: 100%;
                     background-color: $light;
+                    @media (min-width: $large) {
+                    transform-origin: top;
+                    
+                    }
                 }
             }
         }

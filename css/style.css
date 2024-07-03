@@ -882,12 +882,12 @@ main .line.standard {
 }
 .gradient-circle.blue {
   background: #a8d2f1;
-  background: radial-gradient(circle at 50% 50%, rgba(168, 210, 241, 0.3) 0%, rgba(168, 210, 241, 0) 66.5%);
+  background: radial-gradient(circle at 50% 50%, rgba(168, 210, 241, 0.3) 0%, rgba(168, 210, 241, 0) 60%);
   animation: float 20s infinite;
 }
 .gradient-circle.pink {
   background: #FFB4EE;
-  background: radial-gradient(circle, rgba(255, 180, 238, 0.3) 0%, rgba(255, 180, 238, 0) 66.5%);
+  background: radial-gradient(circle, rgba(255, 180, 238, 0.3) 0%, rgba(255, 180, 238, 0) 60%);
   animation: floattwo 30s infinite;
 }
 
@@ -1640,6 +1640,17 @@ html:not(.open-navi) .navi-gradients-wrapper .gradient-ct.pink {
   overflow: hidden;
   z-index: 2;
 }
+.index-header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
+  opacity: 1;
+  z-index: 4;
+}
 @media (max-width: 759px) {
   .index-header:before {
     content: "";
@@ -1649,7 +1660,7 @@ html:not(.open-navi) .navi-gradients-wrapper .gradient-ct.pink {
     bottom: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
-    opacity: 0.75;
+    opacity: 0.35;
     z-index: 3;
   }
 }
@@ -2083,8 +2094,8 @@ main .sec-4-scroll-wrap .sec-4-inner .title-ct .einsatzgebiete-title {
 }
 @media (min-width: 759px) {
   main .sec-4-scroll-wrap .sec-4-inner .title-ct .einsatzgebiete-title {
-    top: 80%;
     font-size: 7.97rem;
+    top: 80%;
   }
 }
 main .sec-4-scroll-wrap .sec-4-inner .gebiete-wrapper {
@@ -2209,7 +2220,7 @@ main .sec-4-scroll-wrap .sec-4-inner .bg:before {
 }
 main .sec-4-scroll-wrap .sec-4-inner .bg:after {
   bottom: 0;
-  background: linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
+  background: linear-gradient(0deg, rgba(20, 20, 20, 0.8) 0%, rgba(20, 20, 20, 0) 100%);
 }
 main .sec-4-scroll-wrap .sec-4-inner .bg picture {
   height: 100%;
@@ -2220,11 +2231,11 @@ main .sec-4-scroll-wrap .sec-4-inner .bg picture img {
      object-fit: cover;
 }
 main .sec-5 .sec-5-scroll-wrap {
-  height: 300vh;
+  height: 350vh;
 }
 @media (min-width: 759px) {
   main .sec-5 .sec-5-scroll-wrap {
-    height: 400vh;
+    height: 450vh;
   }
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner {
@@ -2232,6 +2243,46 @@ main .sec-5 .sec-5-scroll-wrap .sec-5-inner {
   top: 0;
   height: 100vh;
   width: 100%;
+}
+main .sec-5 .sec-5-scroll-wrap .sec-5-inner .gradients-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 75%;
+}
+main .sec-5 .sec-5-scroll-wrap .sec-5-inner .gradients-wrapper .gradient-ct {
+  width: 57.5rem;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .gradients-wrapper .gradient-ct {
+    width: 34.06rem;
+  }
+}
+main .sec-5 .sec-5-scroll-wrap .sec-5-inner .gradients-wrapper .gradient-ct.blue {
+  left: -15%;
+  top: 40%;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .gradients-wrapper .gradient-ct.blue {
+    left: 5%;
+    top: 28%;
+  }
+}
+main .sec-5 .sec-5-scroll-wrap .sec-5-inner .gradients-wrapper .gradient-ct.pink {
+  left: 18%;
+  top: 50%;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .gradients-wrapper .gradient-ct.pink {
+    left: 16%;
+    top: 35%;
+  }
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct {
   position: fixed;
@@ -2251,44 +2302,130 @@ main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct {
   transform: translate(-50%, -50%);
   width: calc(100% - 9.84rem);
 }
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct {
+    width: calc(100% - 1.88rem);
+  }
+}
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct span {
   display: block;
   line-height: 1em;
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct span:not(.serif) {
-  font-size: 8.02rem;
+  font-size: 8.5rem;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct span:not(.serif) {
+    font-size: 5.83rem;
+  }
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct span.serif {
   font-family: ivyora-display, serif;
   font-style: italic;
   font-size: 5.46rem;
 }
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct span.serif {
+    font-size: 2.81rem;
+  }
+}
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.one span.serif {
   padding-left: 17.21rem;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.one span.serif {
+    padding-left: 29.69rem;
+  }
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.one span:nth-of-type(2) {
   padding-left: 7.92rem;
 }
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.one span:nth-of-type(2) {
+    padding-left: 20.21rem;
+  }
+}
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.one span:nth-of-type(3) {
   padding-left: 22.13rem;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.one span:nth-of-type(3) {
+    padding-left: 31.61rem;
+  }
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.two span.serif {
   padding-left: 18.85rem;
 }
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.two span.serif {
+    padding-left: 31.61rem;
+  }
+}
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.two span:nth-of-type(2) {
   padding-left: 18.85rem;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.two span:nth-of-type(2) {
+    padding-left: 31.61rem;
+  }
+}
+main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.two span:nth-of-type(3) {
+  padding-left: 0;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.two span:nth-of-type(3) {
+    padding-left: 15.63rem;
+  }
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.three span.serif {
+    padding-left: 15.31rem;
+  }
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.three span:nth-of-type(2) {
+    padding-left: 15.31rem;
+  }
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.three span:nth-of-type(3) {
   padding-left: 16.85rem;
 }
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.three span:nth-of-type(3) {
+    padding-left: 29.01rem;
+  }
+}
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.three span:nth-of-type(4) {
   padding-left: 51.54rem;
 }
-main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.four span:not(.serif) {
-  font-size: 8.12rem;
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.three span:nth-of-type(4) {
+    padding-left: 51.88rem;
+  }
+}
+@media (max-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.four span:not(.serif) {
+    font-size: 8.12rem;
+  }
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.four span.serif {
+    padding-left: 14.37rem;
+  }
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.four span:nth-of-type(2) {
+    padding-left: 14.37rem;
+  }
 }
 main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.four span:nth-of-type(3) {
   text-align: right;
+}
+@media (min-width: 759px) {
+  main .sec-5 .sec-5-scroll-wrap .sec-5-inner .text-ct .usp-ct.four span:nth-of-type(3) {
+    text-align: center;
+    padding-left: 51.61rem;
+  }
 }
 main .sec-5 .lines-ct {
   position: fixed;
@@ -2308,8 +2445,8 @@ main .sec-5 .lines-ct {
     top: 50%;
     transform: translate(0, -50%);
     flex-flow: column;
-    gap: 0.95rem;
-    left: 9.74rem;
+    gap: 0.78rem;
+    left: 2.81rem;
     width: 1px !important;
     height: 0;
   }
@@ -2334,4 +2471,9 @@ main .sec-5 .lines-ct .line .line-inner {
   width: 100%;
   height: 100%;
   background-color: #F2F2F2;
+}
+@media (min-width: 759px) {
+  main .sec-5 .lines-ct .line .line-inner {
+    transform-origin: top;
+  }
 }/*# sourceMappingURL=style.css.map */
