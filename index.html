@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/normalize.css" media="screen">
     <link rel="stylesheet" href="css/style.css" media="screen">
     <link rel="stylesheet" href="css/lazy-animations.css" media="screen">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" media="screen">
 </head>
 
 <body class="start" data-barba="wrapper">
@@ -43,16 +44,27 @@
                         <nav>
                             <ul>
                                 <li class="nav-item start">
-                                    <a href="#home" data-anchor-target="#home" data-toggle-nav title="Go to start" class="start">
+                                    <a href="#home" data-anchor-target="#home" data-toggle-nav title="Go to start"
+                                        class="start">
                                         <span class="number">01</span>
                                         <span class="name">
                                             Start
                                         </span>
                                     </a>
                                 </li>
-                                <li class="nav-item services">
-                                    <a href="#services" data-anchor-target="#services"  data-toggle-nav title="Go to services" class="services">
+                                <li class="nav-item ueber">
+                                    <a href="#ueber" data-anchor-target="#ueber" data-toggle-nav title="Go to ueber"
+                                        class="ueber">
                                         <span class="number">02</span>
+                                        <span class="name">
+                                            Über mich
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item services">
+                                    <a href="#services" data-anchor-target="#services" data-toggle-nav
+                                        title="Go to services" class="services">
+                                        <span class="number">03</span>
                                         <span class="name">
                                             Services
 
@@ -60,17 +72,18 @@
                                     </a>
                                 </li>
                                 <li class="nav-item testimonials">
-                                    <a href="#testimonials" data-anchor-target="#testimonials"  data-toggle-nav title="Go to testimonials"
-                                        class="testimonials">
-                                        <span class="number">03</span>
+                                    <a href="#testimonials" data-anchor-target="#testimonials" data-toggle-nav
+                                        title="Go to testimonials" class="testimonials">
+                                        <span class="number">04</span>
                                         <span class="name">
                                             Testimonials
                                         </span>
                                     </a>
                                 </li>
                                 <li class="nav-item kontakt">
-                                    <a href="#kontakt" data-anchor-target="#kontakt" data-toggle-contact title="Go to kontakt" class="contact">
-                                        <span class="number">04</span>
+                                    <a href="#kontakt" data-anchor-target="#kontakt" data-toggle-nav
+                                        title="Go to kontakt" class="contact">
+                                        <span class="number">05</span>
                                         <span class="name">
                                             Kontakt
                                         </span>
@@ -143,7 +156,7 @@
 
             </header>
             <main>
-                <div class="sec-1" id="services">
+                <div class="sec-1" id="ueber">
                     <div class="row end">
                         <div class="col large-10">
                             <div class="wenn-ct">
@@ -166,42 +179,41 @@
                         <div class="sec-2-inner">
                             <h1 class="name">Times Event</h1>
                             <div class="dark-overlay"></div>
-                            <div class="bg-imgs-ct">
+                            <div class="bg-imgs-ct sticky-sec">
                                 <div class="imgs-row first">
                                     <div class="row-inner">
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-1.jpg" />
-                                            <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-1.jpg"
+                                            <img alt="Referenzbild" class="lazy" src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-1.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-2.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-2.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-2.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-3.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-3.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-3.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-9.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-9.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-9.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-1.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-1.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-1.jpg" />
                                         </picture>
                                     </div>
@@ -212,35 +224,35 @@
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-5.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-5.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-5.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-6.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-6.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-6.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-7.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-7.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-7.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-8.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-8.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-8.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-5.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-5.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-5.jpg" />
                                         </picture>
                                     </div>
@@ -251,35 +263,35 @@
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-9.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-9.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-9.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-10.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-10.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-10.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-11.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-11.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-11.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-10.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-10.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-10.jpg" />
                                         </picture>
                                         <picture>
                                             <source media="(min-width: 760px)"
                                                 data-srcset="images/index/scroll-imgs/scroll-img-4.jpg" />
                                             <img alt="Referenzbild" class="lazy"
-                                                src="images/index/scroll-imgs/scroll-img-4.jpg"
+                                                src="images/layout/placeholder.png"
                                                 data-src="images/index/scroll-imgs/scroll-img-4.jpg" />
                                         </picture>
                                     </div>
@@ -303,7 +315,7 @@
                                     <div class="aspect-img-ct">
                                         <picture data-parallax-strength="1.2" data-parallax-height="9">
                                             <source media="(min-width: 760px)" srcset="images/index/tina.jpg" />
-                                            <img alt="Referenzbild" src="images/index/tina-mobile.jpg"
+                                            <img alt="Referenzbild" class="lazy" src="images/layout/placeholder.png" data-src="images/index/tina.jpg"
                                                 data-parallax-target />
                                         </picture>
                                     </div>
@@ -328,7 +340,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sec-4">
+                <div class="sec-4" id="services">
                     <div class="sec-4-scroll-wrap">
                         <div class="sec-4-inner">
                             <div class="gebiete-wrapper ">
@@ -346,7 +358,7 @@
                                         <div class="top">
                                             <picture>
                                                 <img alt="Referenzbild" class="lazy"
-                                                    src="images/index/einsatzgebiete/gesamtprojektleitung.svg"
+                                                    src="images/layout/placeholder.png"
                                                     data-src="images/index/einsatzgebiete/gesamtprojektleitung.svg" />
                                             </picture>
                                         </div>
@@ -362,7 +374,7 @@
                                         <div class="top">
                                             <picture>
                                                 <img alt="Referenzbild" class="lazy"
-                                                    src="images/index/einsatzgebiete/teilprojektleitung.svg"
+                                                    src="images/layout/placeholder.png"
                                                     data-src="images/index/einsatzgebiete/teilprojektleitung.svg" />
                                             </picture>
                                         </div>
@@ -372,7 +384,7 @@
                                                     <span class="extra-info">(z.B. Catering, Guestmanagement, Künstler,
                                                         Logistik, Content etc.)</span>
                                                 </i>
-                                           </span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -382,7 +394,7 @@
                                         <div class="top">
                                             <picture>
                                                 <img alt="Referenzbild" class="lazy"
-                                                    src="images/index/einsatzgebiete/regie-assistenz.svg"
+                                                    src="images/layout/placeholder.png"
                                                     data-src="images/index/einsatzgebiete/regie-assistenz.svg" />
                                             </picture>
                                         </div>
@@ -398,7 +410,7 @@
                                         <div class="top">
                                             <picture>
                                                 <img alt="Referenzbild" class="lazy"
-                                                    src="images/index/einsatzgebiete/onsite-managerin.svg"
+                                                    src="images/layout/placeholder.png"
                                                     data-src="images/index/einsatzgebiete/onsite-managerin.svg" />
                                             </picture>
                                         </div>
@@ -414,7 +426,7 @@
                                         <div class="top">
                                             <picture>
                                                 <img alt="Referenzbild" class="lazy"
-                                                    src="images/index/einsatzgebiete/streaming-events.svg"
+                                                    src="images/layout/placeholder.png"
                                                     data-src="images/index/einsatzgebiete/streaming-events.svg" />
                                             </picture>
                                         </div>
@@ -430,7 +442,7 @@
                                         <div class="top">
                                             <picture>
                                                 <img alt="Referenzbild" class="lazy"
-                                                    src="images/index/einsatzgebiete/incentive-reisen.svg"
+                                                    src="images/layout/placeholder.png"
                                                     data-src="images/index/einsatzgebiete/incentive-reisen.svg" />
                                             </picture>
                                         </div>
@@ -451,7 +463,7 @@
                                     <source media="(min-width: 760px)"
                                         data-srcset="images/index/einsatzgebiete/einsatzgebiete-bg-desk.jpg" />
                                     <img alt="Referenzbild" class="lazy"
-                                        src="images/index/einsatzgebiete/einsatzgebiete-bg.jpg"
+                                        src="images/layout/placeholder.png"
                                         data-src="images/index/einsatzgebiete/einsatzgebiete-bg.jpg" />
                                 </picture>
                             </div>
@@ -459,7 +471,7 @@
 
                     </div>
                 </div>
-                <div class="sec-5">
+                <div class="sec-5" id="testimonials">
                     <div class="sec-5-scroll-wrap">
                         <div class="sec-5-inner">
                             <div class="gradients-wrapper">
@@ -472,28 +484,28 @@
                                 </div>
                             </div>
                             <div class="text-ct">
-                                        <div class="usp-ct one">
-                                            <span class="serif">Über 10 Jahre</span>
-                                            <span>Event</span>
-                                            <span>Erfahrung</span>
-                                        </div>
-                                        <div class="usp-ct two">
-                                            <span class="serif">Über 200</span>
-                                            <span>Umgesetzte</span>
-                                            <span>Live-Events</span>
-                                        </div>
-                                        <div class="usp-ct three">
-                                            <span class="serif">Über 200</span>
-                                            <span>umgesetzte</span>
-                                            <span>Streaming-</span>
-                                            <span>Events</span>
-                                        </div>
-                                        <div class="usp-ct four">
-                                            <span class="serif">Über 10 Millionen Euro</span>
-                                            <span>Verantwortetes</span>
-                                            <span>Budget</span>
-                                        </div>
-                                    
+                                <div class="usp-ct one">
+                                    <span class="serif">Über 10 Jahre</span>
+                                    <span>Event</span>
+                                    <span>Erfahrung</span>
+                                </div>
+                                <div class="usp-ct two">
+                                    <span class="serif">Über 200</span>
+                                    <span>Umgesetzte</span>
+                                    <span>Live-Events</span>
+                                </div>
+                                <div class="usp-ct three">
+                                    <span class="serif">Über 200</span>
+                                    <span>umgesetzte</span>
+                                    <span>Streaming-</span>
+                                    <span>Events</span>
+                                </div>
+                                <div class="usp-ct four">
+                                    <span class="serif">Über 10 Millionen Euro</span>
+                                    <span>Verantwortetes</span>
+                                    <span>Budget</span>
+                                </div>
+
                                 <div class="lines-ct">
                                     <div class="line one">
                                         <div class="line-inner"></div>
@@ -508,26 +520,483 @@
                                         <div class="line-inner"></div>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="test-sec padding-outer" id="kontakt">
-                    <p>test</p>
+                <div class="sec-6 padding-outer" >
+                    <div class="row">
+                        <div class="col">
+                            <h3>
+                                <span>Das sagt</span>
+                                <span>die Branche</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="swiper reviewsSwiperMobile">
+                                <picture class="finger">
+                                    <source media="(min-width: 760px)"
+                                        data-srcset="images/index/finger.svg" />
+                                    <img alt="Referenzbild" class="lazy"
+                                        src="images/layout/placeholder.png"
+                                        data-src="images/index/finger.svg" />
+                                </picture>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card">
+                                            <div class="img-ct">
+                                                <picture>
+                                                    <source media="(min-width: 760px)"
+                                                        data-srcset="images/index/aljoscha-mobile.png" />
+                                                    <img alt="Referenzbild" class="lazy"
+                                                        src="images/layout/placeholder.png"
+                                                        data-src="images/index/aljoscha-mobile.png" />
+                                                </picture>
+                                            </div>
+                                            <div class="text-ct">
+                                                <p>"Tina ist ein absolut wertvoller Mensch bei jedem Event. Sie ist
+                                                    nicht nur total kommunikativ und herzlich, sondern bringt mit ihren
+                                                    kreativen Ideen und ihrem Blick für Besonderes einen frischen Wind
+                                                    in jedes Event. Ich bin als Kunde absolut zufrieden und kann sie nur
+                                                    wärmstens empfehlen."</p>
+                                                <div class="line"></div>
+                                                <p class="name">
+                                                    Sarah Zielke-Vogt, Eventmanagerin, Telekom Deutschland GmbH
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card">
+                                            <div class="img-ct">
+                                                <picture>
+                                                    <source media="(min-width: 760px)"
+                                                        data-srcset="images/index/anne-mobile.png" />
+                                                    <img alt="Referenzbild" class="lazy"
+                                                        src="images/layout/placeholder.png"
+                                                        data-src="images/index/anne-mobile.png" />
+                                                </picture>
+                                            </div>
+                                            <div class="text-ct">
+                                                <p>"Ich hatte das Vergnügen für 2,5 Jahre mit Tina zusammenzuarbeiten
+                                                    und kann aus erster Hand bestätigen, dass sie eine
+                                                    außergewöhnliche Führungskraft ist. Ihre Fähigkeit, komplexe
+                                                    Themen zu durchdringen und kreative Ideen zu entwickeln,
+                                                    beeindruckt mich jedes Mal aufs Neue. Sie ist nicht nur eine
+                                                    großartige Teamplayerin, sondern trifft auch an entscheidenden
+                                                    Stellen kluge Entscheidungen, die Projekte voranbringen. Wer mit
+                                                    Tina zusammenarbeitet, wird von ihrer strategischen Denkweise
+                                                    und ihrer Fähigkeit, Ideen in erfolgreiche Lösungen umzusetzen,
+                                                    profitieren."
+                                                </p>
+                                                <div class="line"></div>
+                                                <p class="name">
+                                                    Anne Kikuts (Director Marketing, IBM iX DACH)
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card">
+                                            <div class="img-ct">
+                                                <picture>
+                                                    <source media="(min-width: 760px)"
+                                                        data-srcset="images/index/aljoscha-mobile.png" />
+                                                    <img alt="Referenzbild" class="lazy"
+                                                        src="images/layout/placeholder.png"
+                                                        data-src="images/index/aljoscha-mobile.png" />
+                                                </picture>
+                                            </div>
+                                            <div class="text-ct">
+                                                <p>"Als Moderator habe ich schon einige tolle Shows mit Tina umgesetzt.
+                                                    Jedes Mal lief alles wunderbar rund und ich habe mich sehr
+                                                    wohlgefühlt. Gerne jederzeit wieder."</p>
+                                                <div class="line"></div>
+                                                <p class="name">Aljoscha Höhn, Moderator</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-card">
+                                            <div class="img-ct">
+                                                <picture>
+                                                    <source media="(min-width: 760px)"
+                                                        data-srcset="images/index/anna-mobile.png" />
+                                                    <img alt="Referenzbild" class="lazy"
+                                                        src="images/layout/placeholder.png"
+                                                        data-src="images/index/anna-mobile.png" />
+                                                </picture>
+                                            </div>
+                                            <div class="text-ct">
+                                                <p>"Tina ist nicht nur eine herausragende Eventplanerin im MICE-Bereich,
+                                                    sondern auch ein wundervoller Mensch. Ihre lösungsorientierte
+                                                    Herangehensweise und ihre ruhige Art machen die Zusammenarbeit
+                                                    äußerst angenehm. Zudem ist sie ein äußerst effizienter Typ, der
+                                                    sich nicht davor scheut, projektverantwortlich zu handeln – so macht
+                                                    die gemeinsame Eventplanung gleich noch mehr Spaß. Ich freue mich
+                                                    jetzt schon auf weitere gemeinsame Projekte in der Zukunft. Solltet
+                                                    ihr jemanden z.B. zur Unterstützung für eure Incentive Organisation
+                                                    suchen, kann ich Tina von Herzen und uneingeschränkt empfehlen."</p>
+                                                <div class="line"></div>
+                                                <p class="name">Anna-Corina Meyer, Managing Director, Mallorca Elements
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-buttons-ct">
+                                    
+                                    <div class="swiper-scrollbar"></div>
+                                   
+                                   
+
+                                </div>
+                            </div>
+
+
+                            <div class="reviewsSwiperDesktopCt" data-show-cursor>
+                                <div class="row bottom">
+                                    <div class="col large-6">
+                                        <div class="swiper imgSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+                                                        <div class="img-ct">
+                                                            <!-- <picture>
+
+                                                                <img alt="Referenzbild"
+                                                                    src="images/layout/placeholder.png">
+                                                            </picture> -->
+                                                            <picture>
+                                                                <source media="(min-width: 760px)"
+                                                                    data-srcset="images/index/anna-desk.png" />
+                                                                <img alt="Referenzbild" class="lazy"
+                                                                    src="images/layout/placeholder.png"
+                                                                    data-src="images/index/anna-desk.png" />
+                                                            </picture>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+                                                        <div class="img-ct">
+                                                            <!-- <picture>
+
+                                                                <img alt="Referenzbild"
+                                                                    src="images/layout/placeholder.png">
+                                                            </picture> -->
+                                                            <picture>
+                                                                <source media="(min-width: 760px)"
+                                                                    data-srcset="images/index/anne-desk.png" />
+                                                                <img alt="Referenzbild" class="lazy"
+                                                                    src="images/layout/placeholder.png"
+                                                                    data-src="images/index/anne-desk.png" />
+                                                            </picture>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+                                                        <div class="img-ct">
+                                                            <picture>
+                                                                <source media="(min-width: 760px)"
+                                                                    data-srcset="images/index/aljoscha-desk.png" />
+                                                                <img alt="Referenzbild" class="lazy"
+                                                                    src="images/layout/placeholder.png"
+                                                                    data-src="images/index/aljoscha-desk.png" />
+                                                            </picture>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+                                                        <div class="img-ct">
+                                                            <picture>
+                                                                <source media="(min-width: 760px)"
+                                                                    data-srcset="images/index/aljoscha-desk.png" />
+                                                                <img alt="Referenzbild" class="lazy"
+                                                                    src="images/layout/placeholder.png"
+                                                                    data-src="images/index/aljoscha-desk.png" />
+                                                            </picture>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col large-4 large-prefix-1 text-col">
+                                        <div class="swiper reviewsSwiperDesktop">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+
+                                                        <div class="text-ct">
+                                                            <p>"Tina ist nicht nur eine herausragende Eventplanerin im
+                                                                MICE-Bereich, sondern auch ein wundervoller Mensch. Ihre
+                                                                lösungsorientierte Herangehensweise und ihre ruhige Art
+                                                                machen die Zusammenarbeit äußerst angenehm. Zudem ist
+                                                                sie ein äußerst effizienter Typ, der sich nicht davor
+                                                                scheut, projektverantwortlich zu handeln – so macht die
+                                                                gemeinsame Eventplanung gleich noch mehr Spaß. Ich freue
+                                                                mich jetzt schon auf weitere gemeinsame Projekte in der
+                                                                Zukunft. Solltet ihr jemanden z.B. zur Unterstützung für
+                                                                eure Incentive Organisation suchen, kann ich Tina von
+                                                                Herzen und uneingeschränkt empfehlen."</p>
+                                                            <div class="name-ct">
+                                                                <div class="line"></div>
+                                                                <p class="name">Anna-Corina Meyer, Managing Director,
+                                                                    Mallorca Elements</p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+
+                                                        <div class="text-ct">
+                                                            <p>"Ich hatte das Vergnügen für 2,5 Jahre mit Tina
+                                                                zusammenzuarbeiten und kann aus erster Hand bestätigen, dass sie eine
+                                                                außergewöhnliche Führungskraft ist. Ihre Fähigkeit,
+                                                                komplexe Themen zu durchdringen und kreative Ideen zu entwickeln,
+                                                                beeindruckt mich jedes Mal aufs Neue. Sie ist nicht nur
+                                                                eine großartige Teamplayerin, sondern trifft auch an
+                                                                entscheidenden Stellen kluge Entscheidungen, die Projekte voranbringen.
+                                                                Wer mit Tina zusammenarbeitet, wird von ihrer strategischen
+                                                                Denkweise und ihrer Fähigkeit, Ideen in erfolgreiche Lösungen
+                                                                umzusetzen, profitieren."
+                                                            </p>
+                                                            <div class="name-ct">
+                                                                <div class="line"></div>
+                                                                <p class="name">
+                                                                    Anne Kikuts (Director Marketing, IBM iX DACH)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+
+                                                        <div class="text-ct">
+                                                            <p>"Als Moderator habe ich schon einige tolle Shows mit Tina
+                                                                umgesetzt. Jedes Mal lief alles wunderbar rund und ich
+                                                                habe mich sehr wohlgefühlt. Gerne jederzeit wieder."</p>
+                                                            <div class="name-ct">
+                                                                <div class="line"></div>
+                                                                <p class="name">Aljoscha Höhn, Moderator</p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="swiper-card">
+
+                                                        <div class="text-ct">
+                                                            <p>"Tina ist ein absolut wertvoller Mensch bei jedem Event.
+                                                                Sie ist nicht nur total kommunikativ und herzlich,
+                                                                sondern bringt mit ihren kreativen Ideen und ihrem Blick
+                                                                für Besonderes einen frischen Wind in jedes Event. Ich
+                                                                bin als Kunde absolut zufrieden und kann sie nur
+                                                                wärmstens empfehlen."</p>
+                                                            <div class="name-ct">
+                                                                <div class="line"></div>
+                                                                <p class="name">
+                                                                    Sarah Zielke-Vogt, Eventmanagerin, Telekom
+                                                                    Deutschland GmbH
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-buttons-ct">
+                                    <div class="swiper-button-next" data-cursor-right>
+                                       
+                                    </div>
+                                    <div class="swiper-button-prev" data-cursor-left>
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="test-sec padding-outer" id="kontakt">
-                    <p>test</p>
+                <div id="kontakt"></div>
+                <div class="footer" >
+                    <div class="footer-infos-ct">
+                        <div class="row">
+                            <div class="col">
+                                <div class="footer-infos-inner">
+                                    <div class="aust">
+                                        Design & Code von <a href="https://michael-aust.com/" target="_blank" title="Zu michael-aust.com" class="line-link shown">Michael Aust</a> 
+                                    </div>
+                                    <ul class="navi-add">
+                                        <li>
+                                            <a href="impressum.html" title="Impressum ansehen">
+                                                <span class="name">
+                                                    <span class="first">
+                                                        Impressum
+                                                    </span>
+                                                    <span class="second">
+                                                        Impressum
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="datenschutzerklaerung.html" title="Datenschutzerklärung ansehen">
+                                                <span class="name">
+                                                    <span class="first">
+                                                        Datenschutzerklärung
+                                                    </span>
+                                                    <span class="second">
+                                                        Datenschutzerklärung
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-links-ct">
+                        <div class="mail" data-class-receiver>
+                            <div class="circle" data-clipboard data-clipboard-content="tina@times-event.de">
+                                <div class="img-ct">
+                                    <div class="copy-icon">
+                                        <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.98047 20.3077C4.42818 20.3077 3.98047 20.7554 3.98047 21.3077V21.5382C3.98047 23.195 5.32362 24.5382 6.98047 24.5382H14.5189C16.1758 24.5382 17.5189 23.195 17.5189 21.5382V7.23047C17.5189 5.57361 16.1758 4.23047 14.5189 4.23047H14.2885C13.7362 4.23047 13.2885 4.67818 13.2885 5.23047C13.2885 5.78275 13.7362 6.23047 14.2885 6.23047H14.5189C15.0712 6.23047 15.5189 6.67819 15.5189 7.23047V21.5382C15.5189 22.0904 15.0712 22.5382 14.5189 22.5382H6.98047C6.42818 22.5382 5.98047 22.0904 5.98047 21.5382V21.3077C5.98047 20.7554 5.53275 20.3077 4.98047 20.3077Z" fill="#646464"/>
+                                            <rect x="1.36719" y="1.23047" width="11.5385" height="18.3077" rx="2" stroke="#141414" stroke-width="2"/>
+                                            </svg>                                            
+                                    </div>
+                                    <div class="check-icon">
+                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.80078 13.6L11.2008 16L17.2008 10" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" pathLength="1" stroke-linejoin="round"/>
+                                            <path d="M7 2.60538C8.76504 1.58436 10.8143 1 13 1C19.6274 1 25 6.37258 25 13C25 19.6274 19.6274 25 13 25C6.37258 25 1 19.6274 1 13C1 10.8143 1.58436 8.76504 2.60538 7" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" pathLength="1"/>
+                                            </svg>
+                                    </div>
+                                </div>
+                                <div class="copy-info">
+                                    <div class="text-ct">
+                                        <span>E-Mail in die Zwischenablage kopieren.</span>
+                                        <span>E-Mail kopiert.</span>
+                                    </div>
+                                    <div class="background"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <a href="mailto:tina@times-event.de" class="name">
+                                <span>
+                                    tina@times-event.de
+                                </span>
+                               <div class="line"></div>
+                            </a>
+                        </div>
+                        <div class="phone" data-class-receiver>
+                            <div class="circle" data-clipboard data-clipboard-content="+4917634497690">
+                                <div class="img-ct">
+                                    <div class="copy-icon">
+                                        <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.98047 20.3077C4.42818 20.3077 3.98047 20.7554 3.98047 21.3077V21.5382C3.98047 23.195 5.32362 24.5382 6.98047 24.5382H14.5189C16.1758 24.5382 17.5189 23.195 17.5189 21.5382V7.23047C17.5189 5.57361 16.1758 4.23047 14.5189 4.23047H14.2885C13.7362 4.23047 13.2885 4.67818 13.2885 5.23047C13.2885 5.78275 13.7362 6.23047 14.2885 6.23047H14.5189C15.0712 6.23047 15.5189 6.67819 15.5189 7.23047V21.5382C15.5189 22.0904 15.0712 22.5382 14.5189 22.5382H6.98047C6.42818 22.5382 5.98047 22.0904 5.98047 21.5382V21.3077C5.98047 20.7554 5.53275 20.3077 4.98047 20.3077Z" fill="#646464"  pathLength="1"/>
+                                            <rect x="1.36719" y="1.23047" width="11.5385" height="18.3077" rx="2" stroke="#141414" stroke-width="2" pathLength="1"/>
+                                            </svg>                                            
+                                    </div>
+                                    <div class="check-icon">
+                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.80078 13.6L11.2008 16L17.2008 10" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" pathLength="1" stroke-linejoin="round"/>
+                                            <path d="M7 2.60538C8.76504 1.58436 10.8143 1 13 1C19.6274 1 25 6.37258 25 13C25 19.6274 19.6274 25 13 25C6.37258 25 1 19.6274 1 13C1 10.8143 1.58436 8.76504 2.60538 7" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" pathLength="1"/>
+                                            </svg>
+                                    </div>
+                                </div>
+                                <div class="copy-info">
+                                    <div class="text-ct">
+                                        <span>Telefonnummer in die Zwischenablage kopieren.</span>
+                                        <span>Telefonnummer kopiert.</span>
+
+                                    </div>
+                                    <div class="background"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <a href="tel:+4917634497690" class="name">
+                                <span>
+                                    +49 176 344 976 90
+                                </span>
+                                <div class="line"></div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lets-talk">
+                        <div class="marquee" data-marquee-target data-marquee-duplicate="3" data-marquee-direction="left"
+                            data-marquee-status="normal" data-marquee-speed="25" data-marquee-scroll-speed="12">
+                            <div class="marquee-scroll">
+                                <div class="marquee-content">
+                                    <span class="list-item">Let's Talk</span>
+                                    <div class="line"> </div>
+                                    <span class="list-item">Let's Talk</span>
+                                    <div class="line"> </div>
+                                    <span class="list-item">Let's Talk</span>
+                                    <div class="line"> </div>
+                                    <span class="list-item">Let's Talk</span>
+                                    <div class="line"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bg bg">
+                        <picture>
+                            <source media="(min-width: 760px)"
+                                data-srcset="images/index/footer-bg.jpg" />
+                            <img alt="Referenzbild" class="lazy" src="images/layout/placeholder.png"
+                                data-src="images/index/footer-bg-mobile.jpg" />
+                        </picture>
+                    </div>
                 </div>
-                <div class="test-sec padding-outer" id="kontakt">
-                    <p>test</p>
-                </div>
+
             </main>
-            <div class="navi-overlay">
+            <div class="navi-overlay" aria-hidden="true">
 
             </div>
         </div>
-
+        <div class="cursor-follow">
+            <span>
+                <picture class="arrow-left">
+                    <img alt="Referenzbild" class="lazy" src="images/layout/placeholder.png"
+                        data-src="images/index/arrow-left.svg" />
+                </picture>
+            </span>
+        </div>
         <div class="quickbar">
             <div class="quickbar-inner">
                 <div>
@@ -546,7 +1015,7 @@
                 <div>
                     <div class="menu">
                         <ul class="desktop-nav">
-                            <li class="active">
+                            <li>
                                 <a href="#home" title="Go to home section" data-anchor-target="#home">
                                     <span class="name">
                                         <span class="first">
@@ -554,6 +1023,18 @@
                                         </span>
                                         <span class="second">
                                             Start
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#ueber" title="Go to ueber section" data-anchor-target="#ueber">
+                                    <span class="name">
+                                        <span class="first">
+                                            Über mich
+                                        </span>
+                                        <span class="second">
+                                            Über mich
                                         </span>
                                     </span>
                                 </a>
@@ -571,7 +1052,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#testimonials" data-anchor-target="#testimonials"  title="Go to work section">
+                                <a href="#testimonials" data-anchor-target="#testimonials" title="Go to work section">
                                     <span class="name">
                                         <span class="first">
                                             Testimonials
@@ -657,6 +1138,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/scripts.js"></script>
 </body>

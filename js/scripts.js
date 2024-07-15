@@ -328,10 +328,12 @@
    initializeGSAPAnimations();
    marquee();
    naviToggle();
-   // checkDeviceOrientation();
    scrollDirection();
    htmlFixed();
    initScrollToAnchorLenis();
+   initSwiper();
+   followCursor();
+   clipboardCopy();
  }
 
  function marquee() {
@@ -501,7 +503,7 @@
  function lazyLoadImagesAndRefreshScrollTrigger() {
 
    var lazyLoadInstance = new LazyLoad({
-     threshhold: 100,
+     threshhold: 200,
      callback_loaded: function (element) {
        ScrollTrigger.refresh();
      }
@@ -900,21 +902,21 @@
              scrub: 2,
            }
          })
-         .to('.gradient-ct.blue', {
+         .to('.sec-5 .gradient-ct.blue', {
            left: "50%",
            top: "35%",
 
          })
-         .to('.gradient-ct.blue', {
+         .to('.sec-5 .gradient-ct.blue', {
            left: "-15%",
            top: "30%",
          })
-         .to('.gradient-ct.pink', {
+         .to('.sec-5 .gradient-ct.pink', {
            left: "25%",
            top: "50%",
 
          }, 0)
-         .to('.gradient-ct.pink', {
+         .to('.sec-5 .gradient-ct.pink', {
            left: "-10%",
            top: "50%",
          })
@@ -1201,11 +1203,11 @@
           scrub: 2,
         }
       })
-      .to('.gradient-ct.blue', {
+      .to('.sec-5 .gradient-ct.blue', {
         left: "55%",
         top: "10%",
       })
-      .to('.gradient-ct.pink', {
+      .to('.sec-5 .gradient-ct.pink', {
         left: "40%",
         top: "35%",
 
@@ -1216,6 +1218,19 @@
 
      // GSAP All
      "all": function () {
+
+      ///Show fixed-elements when scrolling to avoid lazyloading images 
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".wenn-ct",
+          start: "top bottom",
+        }
+      })
+      .to('.sticky-sec.bg-imgs-ct', {
+        display: "flex",
+        duration: 0,
+      });
+      
 
        gsap.timeline({
            scrollTrigger: {
@@ -1361,7 +1376,7 @@
              scrub: true,
            }
          })
-         .to('.sec-4-scroll-wrap .bg picture', {
+         .to('.sec-4-scroll-wrap .bg', {
            y: "50%",
          })
          .to('.sec-4-scroll-wrap .einsatzgebiete-title', {
@@ -1398,35 +1413,37 @@
           scale: "0",
         });
 
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: ".sec-5",
+            start: "center center",
+            toggleActions: "play none none reverse",
+          }
+        })
+        .to('.footer', {
+          zIndex: "1",
+        });
+
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: ".sec-6",
+            start: "bottom bottom",
+            end: "bottom top",
+            scrub: true,
+          }
+        })
+        .from('.footer', {
+          y: "25%"
+        })
+        .from('.footer .bg', {
+          scale: "1.3"
+        },0);
+
      }
      // GSAP All END
 
    });
  }
-
-
- // function checkDeviceOrientation() {
- //   // Code to check device orientation...
- //   function checkOrientation() {
- //     const body = document.querySelector("body");
- //     if (window.matchMedia("(orientation: portrait)").matches) {
- //       body.classList.remove("landscape");
- //       body.classList.add("portrait");
- //     } else {
- //       body.classList.remove("portrait");
- //       body.classList.add("landscape");
- //     }
- //   }
-
- //   // Event-Listener für Änderungen der Bildschirmausrichtung
- //   window.addEventListener("orientationchange", checkOrientation);
-
- //   // Event-Listener für Änderungen der Fenstergröße
- //   window.addEventListener("resize", checkOrientation);
-
- //   // Überprüfen der Bildschirmausrichtung beim Laden der Seite
- //   checkOrientation();
- // }
 
  function initScrollToAnchorLenis() {
    $("[data-anchor-target]").click(function () {
@@ -1436,3 +1453,199 @@
      });
    });
  }
+
+
+function initSwiper() {
+  if (window.innerWidth < 760) {
+    const swiper = new Swiper('.swiper.reviewsSwiperMobile', {
+      loop: true,
+      autoHeight: true,
+      speed: 400,
+      slidesPerView: 1,
+      watchSlidesProgress: true,
+      a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+    let isTouched = false;
+
+    swiper.on('touchStart', function () {
+      isTouched = true;
+    });
+
+    swiper.on('slideChange', function () {
+      if (isTouched) {
+        swiper.el.classList.add('touched');
+        isTouched = false; // Reset the flag
+      }
+    });
+
+  } else {
+    const swiper = new Swiper('.swiper.reviewsSwiperDesktop', {
+      loop: true,
+      autoHeight: true,
+      speed: 700,
+      allowTouchMove: false,
+      slidesPerView: 1,
+      initialSlide: 1,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      a11y: {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: 'Next slide',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    const galleryThumbs = new Swiper('.swiper.imgSwiper', {
+      slidesPerView: 2,
+      speed: 700,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+}
+
+
+function followCursor() {
+  // Überprüfe, ob das erforderliche HTML-Element vorhanden ist
+  const cursorFollow = document.querySelector(".cursor-follow");
+  if (!cursorFollow) return; // Beende die Funktion, wenn das Element nicht gefunden wurde
+
+  if (window.innerWidth > 759) {
+    const span = cursorFollow.querySelector("span");
+    let posX = 0;
+    let posY = 0;
+    let mouseX = 0;
+    let mouseY = 0;
+
+    const delay = 0.12;
+
+    function followCursor() {
+      const distX = mouseX - posX;
+      const distY = mouseY - posY;
+      posX += distX * delay;
+      posY += distY * delay;
+
+      cursorFollow.style.left = posX + "px";
+      cursorFollow.style.top = posY + "px";
+
+      requestAnimationFrame(followCursor);
+    }
+
+    document.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    followCursor();
+
+    const elementsToShowCursor = document.querySelectorAll("[data-show-cursor]");
+    elementsToShowCursor.forEach(element => {
+      element.addEventListener("mouseover", function () {
+        cursorFollow.style.transition = "transform 0.3s";
+        cursorFollow.style.transform = "scale(1)";
+        // Event Listener für mousedown und mouseup hinzufügen
+        document.addEventListener("mousedown", mouseDownHandler);
+        document.addEventListener("mouseup", mouseUpHandler);
+      });
+      element.addEventListener("mouseleave", function () {
+        cursorFollow.style.transition = "transform 0.3s";
+        cursorFollow.style.transform = "scale(0)";
+        // Event Listener für mousedown und mouseup entfernen
+        document.removeEventListener("mousedown", mouseDownHandler);
+        document.removeEventListener("mouseup", mouseUpHandler);
+      });
+    });
+
+    const elementsCursorLeft = document.querySelectorAll("[data-cursor-left]");
+    elementsCursorLeft.forEach(element => {
+      element.addEventListener("mouseover", function () {
+        cursorFollow.classList.add("cursor-left");
+      });
+      element.addEventListener("mouseleave", function () {
+        cursorFollow.classList.remove("cursor-left");
+      });
+    });
+
+    const elementsCursorRight = document.querySelectorAll("[data-cursor-right]");
+    elementsCursorRight.forEach(element => {
+      element.addEventListener("mouseover", function () {
+        cursorFollow.classList.add("cursor-right");
+      });
+      element.addEventListener("mouseleave", function () {
+        cursorFollow.classList.remove("cursor-right");
+      });
+    });
+
+    function mouseDownHandler() {
+      cursorFollow.classList.add("pressed", "pressed-animation");
+      setTimeout(() => {
+        cursorFollow.classList.remove("pressed-animation");
+      }, 700); // Dauer der Animation in ms
+    }
+
+    function mouseUpHandler() {
+      cursorFollow.classList.remove("pressed");
+    }
+  }
+}
+function clipboardCopy() {
+  function copyToClipboard(content, classReceiverElement) {
+    const tempTextarea = document.createElement('textarea');
+    tempTextarea.value = content;
+    document.body.appendChild(tempTextarea);
+    tempTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextarea);
+
+    // Füge die Klasse 'copy-success' zum classReceiverElement hinzu
+    classReceiverElement.classList.add('copy-success');
+
+    // Entferne die Klasse nach 5 Sekunden wieder
+    setTimeout(() => {
+      classReceiverElement.classList.remove('copy-success');
+    }, 7000);
+  }
+
+  const clipboardElements = document.querySelectorAll("[data-clipboard]");
+
+  clipboardElements.forEach(element => {
+    function handleEvent() {
+      const content = element.getAttribute("data-clipboard-content");
+      const classReceiverElement = element.closest("[data-class-receiver]");
+      
+      if (content && classReceiverElement) {
+        // Kopiere den Inhalt in die Zwischenablage
+        copyToClipboard(content, classReceiverElement);
+
+        // Entferne die Klasse 'copy-success' von allen anderen data-class-receiver Elementen
+        clipboardElements.forEach(el => {
+          const otherClassReceiverElement = el.closest("[data-class-receiver]");
+          if (el !== element && otherClassReceiverElement && otherClassReceiverElement.classList.contains('copy-success')) {
+            otherClassReceiverElement.classList.remove('copy-success');
+          }
+        });
+      }
+    }
+
+    element.addEventListener("click", handleEvent);
+    element.addEventListener("touchend", handleEvent);
+  });
+}
