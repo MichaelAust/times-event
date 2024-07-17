@@ -1020,30 +1020,95 @@ main .line.standard {
 }
 
 .page-transition {
+    .logo-sec {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $dark;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999994;
+        opacity: 0;
+        gap: 4rem;
+        @media (min-width: $large) {
+            gap: 1rem;
+
+        }
+        .img-mark {
+            display: flex;
+            flex-flow: column;
+            .triangle {
+                display: block;
+                opacity: .65;
+                height: 14.72rem;
+                width: 22.22rem;
+                @media (min-width: $large) {
+                    height: 4.27rem;
+                    width: 6.41rem;
+                }
+                &:first-of-type {
+                    background: linear-gradient(90deg, rgba(255,247,173,1) 0%, rgba(255,169,249,1) 100%);
+                    margin-bottom: -4.86rem;
+                    clip-path: polygon(100% 0, 0 0, 50% 100%);
+                    z-index: 3;
+                    @media (min-width: $large) {
+                        margin-bottom: -1.56rem;
+                    }
+                }
+                &:last-of-type {
+                    background: linear-gradient(900deg, #CDFFD8 0%, #94B9FF 100%);
+                    margin-top: -4.86rem;
+                    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+                    @media (min-width: $large) {
+                        margin-top: -1.56rem;
+                    }
+                }
+            }
+        }
+        .name {
+            @extend %display-font;
+            font-size: 6rem;
+            font-weight: 600;
+            @media (min-width: $large) {
+                font-size: 2.5rem;            
+            }
+        }
+    }
     .transition-overlay {
         position: fixed;
         left: 0;
         width: 100%;
-        background-color: $light;
+        background-color: $dark;
         z-index: 9999999;
         pointer-events: none;
         opacity: 1;
         height: 100%;
 
         &:nth-of-type(1) {
-            background-color: $dark;
             z-index: 9999993;
         }
 
         &:nth-of-type(2) {
-            background-color: lighten($dark, 25%);
             z-index: 9999992;
-        }
-
-        &:nth-of-type(3) {
-            background-color: lighten($dark, 50%);
-            z-index: 9999991;
-
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-image: url(../images/layout/navi-overlay-gradient.svg);
+                background-size: cover;
+                background-position: center;
+                opacity: .65;
+                z-index: 2;
+            }
         }
     }
 }
@@ -1208,17 +1273,16 @@ $large-branding-width: 3.18rem;
     left: 0;
     width: 100%;
     z-index: 99999;
-    @extend %animated-transform;
+    transition: .4s ease-out;
 
     body.scrolling-down & {
         transform: translateY(-100%) !important;
     }
 
     html.open-navi & {
-        transform: 0!important;
+        transform: translateY(0%)!important;
     }
 
-        transition: .4s ease-out;
 
         &:before {
             content: '';
@@ -1960,7 +2024,7 @@ $large-branding-width: 3.18rem;
                                         color: $light;
                                         line-height: 100%;
                                         position: relative;
-                                        font-size: 9.6rem;
+                                        font-size: 9.1rem;
 
                                         .second {
                                             position: absolute;
@@ -1980,7 +2044,7 @@ $large-branding-width: 3.18rem;
                                         font-family: $serif-font-display;
                                         font-style: italic;
                                         color: $text;
-                                        font-size: 5.19rem;
+                                        font-size: 5rem;
                                         margin-right: 2.75rem;
 
                                         @media (min-width: $large) {
@@ -2136,6 +2200,13 @@ $large-branding-width: 3.18rem;
             }
         }
     }
+    .bg-ct {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
 
     .bg {
         position: absolute;
@@ -2190,6 +2261,9 @@ $large-branding-width: 3.18rem;
             font-size: 2.4rem;
             max-width: 42.25rem;
             margin-bottom: 2.81rem;
+        }
+        span {
+            display: inline-block;
         }
     }
 }
@@ -2356,7 +2430,8 @@ main {
             display: flex;
             gap: $base-gap;
             align-items: center;
-            position: fixed;
+            position: absolute;
+            // position: fixed;
             top: 0;
             left: 0;
             right: 0;
@@ -2367,9 +2442,9 @@ main {
             transform-origin: center;
             z-index: -3;
 
-            &.sticky-sec {
-                display: none;
-            }
+            // &.fixed-sec {
+            //     display: none;
+            // }
 
             @media (min-width: $large) {
                 gap: $large-base-gap;
@@ -2407,14 +2482,17 @@ main {
                 }
 
                 picture {
-                    aspect-ratio: 3/4;
-
+                    // aspect-ratio: 3/4;
+                    height: 33vh;
+                    width: 100%;
                     @media (min-width: $large) {
-                        aspect-ratio: 16/9;
+                        // aspect-ratio: 16/9;
+                        height: 33vh;
                     }
 
                     img {
                         height: 100%;
+                        width: 100%;
                         object-fit: cover;
                         object-position: center;
                     }
@@ -3381,14 +3459,14 @@ main {
     z-index: -3;
     height: 100vh;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    &.sticky-sec {
-        display: none;
-    }
+    // &.fixed-sec {
+    //     display: none;
+    // }
 
     .bg {
         position: absolute;
@@ -3509,7 +3587,6 @@ main {
             display: flex;
             align-items: center;
             gap: 1.64rem;
-
             @media (min-width: $large) {
                 gap: .89rem;
             }
@@ -3797,7 +3874,6 @@ main {
                 }
             }
             span {
-                @extend %animated-transform-out;
                 display: block;
                 width: fit-content;
                 font-size: 8.5rem;
