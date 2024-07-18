@@ -58,7 +58,7 @@ html.lenis {
 }
 
 .footer .footer-links-ct .mail .circle .copy-info,
-.footer .footer-links-ct .phone .circle .copy-info, main .reviewsSwiperDesktopCt .text-col .swiper-slide:not(.swiper-slide-active) .text-ct, main .sec-6 .reviewsSwiperMobile .finger, .back-to-top .circle, .back-to-top .arrow, html, .btn {
+.footer .footer-links-ct .phone .circle .copy-info, main .reviewsSwiperDesktopCt .text-col .swiper-slide:not(.swiper-slide-active) .text-ct, main .sec-6 .reviewsSwiperMobile .finger, html, .btn {
   transition: 0.3s ease;
 }
 
@@ -326,63 +326,6 @@ ol {
     max-width: calc(100% + 1.88rem);
     width: calc(100% + 1.88rem);
   }
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 4.92rem;
-  right: 4.92rem;
-  z-index: 1001;
-  font-size: 1rem;
-  width: 14rem;
-  height: 14rem;
-  text-decoration: none;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  mix-blend-mode: difference;
-}
-@media (min-width: 759px) {
-  .back-to-top {
-    width: 3.3rem;
-    height: 3.3rem;
-    bottom: 0.94rem;
-    right: 0.94rem;
-  }
-}
-.back-to-top:hover .circle {
-  transform: scale(1.1);
-}
-body:not(.scrolling-up) .back-to-top, html:not(.fixed) .back-to-top, html.open-navi .back-to-top {
-  pointer-events: none;
-}
-body:not(.scrolling-up) .back-to-top .circle, html:not(.fixed) .back-to-top .circle, html.open-navi .back-to-top .circle {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0);
-}
-body:not(.scrolling-up) .back-to-top .arrow, html:not(.fixed) .back-to-top .arrow, html.open-navi .back-to-top .arrow {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0);
-}
-.back-to-top .arrow {
-  position: absolute;
-  margin: 0;
-  inset: auto;
-  width: 15%;
-  z-index: 3;
-  mix-blend-mode: difference;
-}
-.back-to-top .circle {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin: 0;
-  inset: auto;
-  background-color: #F2F2F2;
-  border-radius: 100%;
 }
 
 .col {
@@ -1033,6 +976,30 @@ main .line.standard {
 }
 .cursor-follow.cursor-right span picture {
   transform: rotate(0deg);
+}
+
+div.please-rotate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #141414;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  z-index: 9999999;
+  font-size: 1.915rem;
+  gap: 2rem;
+  display: none;
+}
+html.please-rotate div.please-rotate {
+  display: flex !important;
+}
+div.please-rotate .branding {
+  width: 8rem;
 }
 
 .quickbar {

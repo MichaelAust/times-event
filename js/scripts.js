@@ -133,7 +133,7 @@
 
   if(document.querySelector('.fade-in')) {
     tl.fromTo(".fade-in", {
-       y: "50%",
+       y: "60%",
     }, {
       y: "0%",
       duration: 2,
@@ -150,7 +150,7 @@
       duration: 2,
       ease: "Expo.easeOut",
       stagger: 0.03,
-    }, 0.3);
+    }, 0.4);
   }
 
  }
@@ -321,7 +321,10 @@
    initSwiper();
    followCursor();
    clipboardCopy();
+   orientationCheck();
  }
+
+
 
  function marquee() {
    $('[data-marquee-target]').each(function () {
@@ -599,6 +602,7 @@
 
  function initializeGSAPAnimations() {
    // GSAP Start
+
 
    //GSAP Mobile Start
    ScrollTrigger.matchMedia({
@@ -1237,7 +1241,7 @@
              trigger: ".sec-1",
              start: "top bottom",
              end: "center top",
-             scrub: true,
+             scrub: 0.1,
            }
          })
          .from('.sec-1 .wenn-ct ', {
@@ -1249,16 +1253,6 @@
          .from('.sec-1 .wenn-ct span:nth-of-type(3)', {
            paddingLeft: 0,
          }, 0)
-         .from('.sec-1 .gradient-ct.blue', {
-           x: "50%",
-           y: "-50%",
-           scale: "1.1",
-         }, 0)
-         .from('.sec-1 .gradient-ct.pink', {
-           x: "75%",
-           y: "-25%",
-           scale: "1.1",
-         }, 0);
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-2-scroll-wrap",
@@ -1366,7 +1360,7 @@
            }
          })
          .to('.sec-4-scroll-wrap .bg', {
-           y: "50%",
+           y: "40%",
          })
          .to('.sec-4-scroll-wrap .einsatzgebiete-title', {
            y: "25vh",
@@ -1495,10 +1489,9 @@
 
 
 
-     }
+     },
      // GSAP All END
-
-   });
+    });
  }
 
  function initScrollToAnchorLenis() {
@@ -1706,3 +1699,36 @@
      element.addEventListener("touchend", handleEvent);
    });
  }
+
+ function orientationCheck() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile = /iphone|ipod|android.+mobile/.test(userAgent);
+    const isTablet = !isMobile && /ipad|android/.test(userAgent);
+    const isLandscape = window.innerWidth > window.innerHeight;
+    const isPortrait = window.innerHeight > window.innerWidth;
+
+    const htmlElement = document.documentElement;
+
+    if ((isMobile && isLandscape) || (isTablet && isPortrait)) {
+      htmlElement.classList.add('please-rotate');
+    } else {
+      htmlElement.classList.remove('please-rotate');
+    }
+  
+ }
+
+
+ (function() {
+  function reloadOnResize() {
+    window.location.reload();
+  }
+
+  window.addEventListener('orientationchange', reloadOnResize);
+
+  // Optional: Ein Timer, um zu verhindern, dass zu häufig neu geladen wird
+  let resizeTimeout;
+  window.addEventListener('orientationchange', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(reloadOnResize, 500);
+  });
+})();
