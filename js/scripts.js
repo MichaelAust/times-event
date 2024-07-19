@@ -1398,12 +1398,12 @@
 
        gsap.timeline({
            scrollTrigger: {
-             trigger: ".sec-5",
+             trigger: "body.start .footer-trigger",
              start: "center center",
              toggleActions: "play none none reverse",
            }
          })
-         .to('.footer', {
+         .to('body.start .footer', {
            zIndex: "1",
          });
 
@@ -1442,7 +1442,7 @@
 
        gsap.timeline({
            scrollTrigger: {
-             trigger: ".sec-6",
+             trigger: ".footer-trigger",
              start: "bottom bottom",
              end: "bottom top",
              scrub: true,
@@ -1458,7 +1458,7 @@
 
        gsap.timeline({
            scrollTrigger: {
-             trigger: ".sec-6",
+             trigger: ".footer-trigger",
              start: "bottom center",
              toggleActions: "play none none reverse",
            }
@@ -1505,70 +1505,73 @@
 
 
  function initSwiper() {
-   if (window.innerWidth < 760) {
-     const swiper = new Swiper('.swiper.reviewsSwiperMobile', {
-       loop: true,
-       autoHeight: true,
-       speed: 400,
-       slidesPerView: 1,
-       watchSlidesProgress: true,
-       a11y: {
-         prevSlideMessage: 'Previous slide',
-         nextSlideMessage: 'Next slide',
-       },
-       navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-       },
-       scrollbar: {
-         el: '.swiper-scrollbar',
-       },
-     });
-     let isTouched = false;
-
-     swiper.on('touchStart', function () {
-       isTouched = true;
-     });
-
-     swiper.on('slideChange', function () {
-       if (isTouched) {
-         swiper.el.classList.add('touched');
-         isTouched = false; // Reset the flag
-       }
-     });
-
-   } else {
-     const swiper = new Swiper('.swiper.reviewsSwiperDesktop', {
-       loop: true,
-       autoHeight: true,
-       speed: 700,
-       allowTouchMove: false,
-       slidesPerView: 1,
-       initialSlide: 1,
-       effect: 'fade',
-       fadeEffect: {
-         crossFade: true
-       },
-       a11y: {
-         prevSlideMessage: 'Previous slide',
-         nextSlideMessage: 'Next slide',
-       },
-       navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-       },
-     });
-
-     const galleryThumbs = new Swiper('.swiper.imgSwiper', {
-       slidesPerView: 2,
-       speed: 700,
-       loop: true,
-       navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-       },
-     });
-   }
+  if(document.querySelector('.swiper')) {
+    if (window.innerWidth < 760) {
+      const swiper = new Swiper('.swiper.reviewsSwiperMobile', {
+        loop: true,
+        autoHeight: true,
+        speed: 400,
+        slidesPerView: 1,
+        watchSlidesProgress: true,
+        a11y: {
+          prevSlideMessage: 'Previous slide',
+          nextSlideMessage: 'Next slide',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+      let isTouched = false;
+ 
+      swiper.on('touchStart', function () {
+        isTouched = true;
+      });
+ 
+      swiper.on('slideChange', function () {
+        if (isTouched) {
+          swiper.el.classList.add('touched');
+          isTouched = false; // Reset the flag
+        }
+      });
+ 
+    } else {
+      const swiper = new Swiper('.swiper.reviewsSwiperDesktop', {
+        loop: true,
+        autoHeight: true,
+        speed: 700,
+        allowTouchMove: false,
+        slidesPerView: 1,
+        initialSlide: 1,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        a11y: {
+          prevSlideMessage: 'Previous slide',
+          nextSlideMessage: 'Next slide',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+ 
+      const galleryThumbs = new Swiper('.swiper.imgSwiper', {
+        slidesPerView: 2,
+        speed: 700,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    }
+  
+  };
  }
 
 

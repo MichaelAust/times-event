@@ -245,12 +245,12 @@ main {
 
 b,
 strong {
-    color: $dark;
+    
 }
 
 main {
 
-    ul.styled {
+    ul.styled-list {
 
         li {
             margin-bottom: $base-font-size;
@@ -897,15 +897,20 @@ h6,
 
 ////Globals End
 /// Helpers Start
-main .line.standard {
-    display: block;
-    background-color: $border;
-    width: 100%;
-    height: 1px;
-    margin: 18.06rem 0;
+main .line {
+    body:not(.start) & {
 
-    @media (min-width: $large) {
-        margin: 7.03rem 0;
+        display: block;
+        background-color: $border;
+        width: 100%;
+        height: 1px;
+        
+        &.standard {
+            margin: $base-font-size * 2 0;
+            @media (min-width: $large) {
+                margin: $large-font-size * 2 0;
+            }
+        }
     }
 }
 
@@ -3111,7 +3116,7 @@ main {
     }
 
     .sec-6 {
-        margin-bottom: 100vh;
+        // margin-bottom: 100vh;
 
         h3 {
             font-size: 9.02rem;
@@ -3476,9 +3481,13 @@ main {
     }
 }
 
+.footer-wrapper {
+    height: 100vh;
+    position: relative;
+}
 .footer {
     background-color: $dark-grey;
-    position: relative;
+    // position: relative;
     z-index: -3;
     height: 100vh;
     overflow: hidden;
@@ -3989,6 +3998,125 @@ main {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+///Sub pages
+/// 
+.sub-page {
+    header {
+        background-color: $dark;
+        position: relative;
+        z-index: 2;
+    }
+    .sub-gradient-wrapper {
+        @media (max-width: $large) {
+            display: none;
+        }
+        .gradient-ct {
+            &.blue {
+                width: 33.59rem;
+                position: fixed;
+                z-index: 2;
+                bottom: -5%;
+                left: -10%;
+                
+            }
+            &.pink {
+                width: 33.59rem;
+                position: fixed;
+                z-index: 2;
+                bottom: -15%;
+                left: 5%;
+            }
+        }
+    }
+    .footer {
+        position: fixed;
+        z-index: 1;
+    }
+}
+.sub-header {
+    padding-top: 17.78rem;
+    @media (min-width: $large) {
+        padding-top: 5.68rem;
+    }
+    h1 {
+        margin-top: calc(17.78rem / 2);
+        @media (min-width: $large) {
+            margin-top: 3.23rem;
+        }
+        body.impressum & {
+            font-size: 13.06rem;
+            margin-bottom: 35vh;
+            @media (min-width: $large) {
+                font-size: 7.03rem;
+                margin-bottom: 30vh;
+            }
+        }
+        body.datenschutzerklaerung & {
+            font-size: 9.8rem;
+            margin-bottom: 32vh;
+            @media (min-width: $large) {
+                font-size:6.51rem;
+                margin-bottom: 25vh;
+            }
+        }
+    }
+}
+
+.sec-impressum, .sec-dse {
+    .line {
+        margin-bottom: $base-font-size * 2;
+        @media (min-width: $large) {
+            margin-bottom: $large-font-size * 2;
+
+        }
+    }
+    .impressum-infos {
+        // font-family: $serif-font-display;
+        // font-size: 5.28rem;
+        // font-style: italic;
+        // @media (min-width: $large) {
+        //     font-size: 1.35rem;
+        // }
+        .category {
+            color: $text;
+            hyphens: auto;
+        }
+    }
+    .dse-infos {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: $serif-font-display;
+            font-size: 5.28rem;
+            font-style: italic;
+            color: $text;
+            text-transform: initial;
+            letter-spacing: initial;
+            font-weight: 400;
+            line-height: 140%;
+            @media (min-width: $large) {
+                font-size: 1.35rem;
+  
+            }
+        }
+        p, ul {
+            color: $text;
+            b {
+                color: $light;
             }
         }
     }

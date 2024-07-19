@@ -187,23 +187,18 @@ main .mb {
   }
 }
 
-b,
-strong {
-  color: #141414;
-}
-
-main ul.styled li {
+main ul.styled-list li {
   margin-bottom: 3.83rem;
   position: relative;
   padding-left: 4.596rem;
 }
 @media (min-width: 759px) {
-  main ul.styled li {
+  main ul.styled-list li {
     margin-bottom: 0.95rem;
     padding-left: 1.235rem;
   }
 }
-main ul.styled li:before {
+main ul.styled-list li:before {
   text-indent: -3.83rem;
   content: "";
   position: absolute;
@@ -216,17 +211,17 @@ main ul.styled li:before {
   border-radius: 100%;
 }
 @media (min-width: 759px) {
-  main ul.styled li:before {
+  main ul.styled-list li:before {
     text-indent: -0.95rem;
     top: 0.665rem;
     height: 0.475rem;
     width: 0.475rem;
   }
 }
-main ul.styled li:last-of-type {
+main ul.styled-list li:last-of-type {
   margin-bottom: 0;
 }
-main ul.styled ul {
+main ul.styled-list ul {
   margin-left: 1rem;
   margin-bottom: 0;
   margin-top: 1rem;
@@ -661,16 +656,18 @@ h6,
   */
 }
 
-main .line.standard {
+body:not(.start) main .line {
   display: block;
   background-color: #4A4A4A;
   width: 100%;
   height: 1px;
-  margin: 18.06rem 0;
+}
+body:not(.start) main .line.standard {
+  margin: 7.66rem 0;
 }
 @media (min-width: 759px) {
-  main .line.standard {
-    margin: 7.03rem 0;
+  body:not(.start) main .line.standard {
+    margin: 1.9rem 0;
   }
 }
 
@@ -2578,9 +2575,6 @@ main .sec-5 .lines-ct .line .line-inner {
     transform-origin: top;
   }
 }
-main .sec-6 {
-  margin-bottom: 100vh;
-}
 main .sec-6 h3 {
   font-size: 9.02rem;
   margin-bottom: 9.02rem;
@@ -2854,9 +2848,13 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   cursor: pointer;
 }
 
+.footer-wrapper {
+  height: 100vh;
+  position: relative;
+}
+
 .footer {
   background-color: #212121;
-  position: relative;
   z-index: -3;
   height: 100vh;
   overflow: hidden;
@@ -3325,4 +3323,149 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
     height: 0.78rem;
     width: 5.21rem;
   }
+}
+
+.sub-page header {
+  background-color: #141414;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 759px) {
+  .sub-page .sub-gradient-wrapper {
+    display: none;
+  }
+}
+.sub-page .sub-gradient-wrapper .gradient-ct.blue {
+  width: 33.59rem;
+  position: fixed;
+  z-index: 2;
+  bottom: -5%;
+  left: -10%;
+}
+.sub-page .sub-gradient-wrapper .gradient-ct.pink {
+  width: 33.59rem;
+  position: fixed;
+  z-index: 2;
+  bottom: -15%;
+  left: 5%;
+}
+.sub-page .footer {
+  position: fixed;
+  z-index: 1;
+}
+
+.sub-header {
+  padding-top: 17.78rem;
+}
+@media (min-width: 759px) {
+  .sub-header {
+    padding-top: 5.68rem;
+  }
+}
+.sub-header h1 {
+  margin-top: 8.89rem;
+}
+@media (min-width: 759px) {
+  .sub-header h1 {
+    margin-top: 3.23rem;
+  }
+}
+body.impressum .sub-header h1 {
+  font-size: 13.06rem;
+  margin-bottom: 35vh;
+}
+@media (min-width: 759px) {
+  body.impressum .sub-header h1 {
+    font-size: 7.03rem;
+    margin-bottom: 30vh;
+  }
+}
+body.datenschutzerklaerung .sub-header h1 {
+  font-size: 9.8rem;
+  margin-bottom: 32vh;
+}
+@media (min-width: 759px) {
+  body.datenschutzerklaerung .sub-header h1 {
+    font-size: 6.51rem;
+    margin-bottom: 25vh;
+  }
+}
+
+.sec-impressum .line, .sec-dse .line {
+  margin-bottom: 7.66rem;
+}
+@media (min-width: 759px) {
+  .sec-impressum .line, .sec-dse .line {
+    margin-bottom: 1.9rem;
+  }
+}
+.sec-impressum .impressum-infos .category, .sec-dse .impressum-infos .category {
+  color: #B3B3B3;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+.sec-impressum .dse-infos h1,
+.sec-impressum .dse-infos h2,
+.sec-impressum .dse-infos h3,
+.sec-impressum .dse-infos h4,
+.sec-impressum .dse-infos h5,
+.sec-impressum .dse-infos h6,
+.sec-impressum .dse-infos .h1,
+.sec-impressum .dse-infos .h2,
+.sec-impressum .dse-infos .h3,
+.sec-impressum .dse-infos .h4,
+.sec-impressum .dse-infos .h5,
+.sec-impressum .dse-infos .h6, .sec-dse .dse-infos h1,
+.sec-dse .dse-infos h2,
+.sec-dse .dse-infos h3,
+.sec-dse .dse-infos h4,
+.sec-dse .dse-infos h5,
+.sec-dse .dse-infos h6,
+.sec-dse .dse-infos .h1,
+.sec-dse .dse-infos .h2,
+.sec-dse .dse-infos .h3,
+.sec-dse .dse-infos .h4,
+.sec-dse .dse-infos .h5,
+.sec-dse .dse-infos .h6 {
+  font-family: ivyora-display, serif;
+  font-size: 5.28rem;
+  font-style: italic;
+  color: #B3B3B3;
+  text-transform: initial;
+  letter-spacing: initial;
+  font-weight: 400;
+  line-height: 140%;
+}
+@media (min-width: 759px) {
+  .sec-impressum .dse-infos h1,
+  .sec-impressum .dse-infos h2,
+  .sec-impressum .dse-infos h3,
+  .sec-impressum .dse-infos h4,
+  .sec-impressum .dse-infos h5,
+  .sec-impressum .dse-infos h6,
+  .sec-impressum .dse-infos .h1,
+  .sec-impressum .dse-infos .h2,
+  .sec-impressum .dse-infos .h3,
+  .sec-impressum .dse-infos .h4,
+  .sec-impressum .dse-infos .h5,
+  .sec-impressum .dse-infos .h6, .sec-dse .dse-infos h1,
+  .sec-dse .dse-infos h2,
+  .sec-dse .dse-infos h3,
+  .sec-dse .dse-infos h4,
+  .sec-dse .dse-infos h5,
+  .sec-dse .dse-infos h6,
+  .sec-dse .dse-infos .h1,
+  .sec-dse .dse-infos .h2,
+  .sec-dse .dse-infos .h3,
+  .sec-dse .dse-infos .h4,
+  .sec-dse .dse-infos .h5,
+  .sec-dse .dse-infos .h6 {
+    font-size: 1.35rem;
+  }
+}
+.sec-impressum .dse-infos p, .sec-impressum .dse-infos ul, .sec-dse .dse-infos p, .sec-dse .dse-infos ul {
+  color: #B3B3B3;
+}
+.sec-impressum .dse-infos p b, .sec-impressum .dse-infos ul b, .sec-dse .dse-infos p b, .sec-dse .dse-infos ul b {
+  color: #F2F2F2;
 }/*# sourceMappingURL=style.css.map */
