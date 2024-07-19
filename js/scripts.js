@@ -799,7 +799,7 @@
            scrollTrigger: {
              trigger: ".sec-5-scroll-wrap",
              start: "top center",
-             end: "top+=27.5% center",
+             end: "top+=37% center",
              scrub: true,
 
            }
@@ -821,8 +821,8 @@
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-5-scroll-wrap",
-             start: "top+=25% center",
-             end: "top+=52.5% center",
+             start: "top+=33.33% center",
+             end: "top+=70% center",
              scrub: true,
            }
          })
@@ -843,8 +843,8 @@
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-5-scroll-wrap",
-             start: "top+=50% center",
-             end: "top+=77.5% center",
+             start: "top+=66.66% center",
+             end: "bottom center",
              scrub: true,
            }
          })
@@ -862,27 +862,6 @@
            width: 0,
          }, 0);
 
-       gsap.timeline({
-           scrollTrigger: {
-             trigger: ".sec-5-scroll-wrap",
-             start: "top+=72.5% center",
-             end: "bottom center",
-             scrub: true,
-           }
-         })
-         .from('.usp-ct.four span', {
-           opacity: 0,
-           y: "17rem",
-           stagger: 0.05, // Versatz zwischen den fourn der einzelnen Elemente
-         })
-         .to('.usp-ct.four span', {
-           opacity: 0,
-           y: "-17rem",
-           stagger: 0.05,
-         })
-         .from('.sec-5 .lines-ct .line.four .line-inner', {
-           width: 0,
-         }, 0);
        ///USP Lines Mobile End
 
        gsap.timeline({
@@ -1101,7 +1080,7 @@
            scrollTrigger: {
              trigger: ".sec-5-scroll-wrap",
              start: "top center",
-             end: "top+=27.5% center",
+             end: "top+=37% center",
              scrub: true,
 
            }
@@ -1123,8 +1102,8 @@
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-5-scroll-wrap",
-             start: "top+=25% center",
-             end: "top+=52.5% center",
+             start: "top+=33.33% center",
+             end: "top+=70% center",
              scrub: true,
            }
          })
@@ -1145,8 +1124,8 @@
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-5-scroll-wrap",
-             start: "top+=50% center",
-             end: "top+=77.5% center",
+             start: "top+=66.66% center",
+             end: "bottom center",
              scrub: true,
            }
          })
@@ -1164,27 +1143,6 @@
            height: 0,
          }, 0);
 
-       gsap.timeline({
-           scrollTrigger: {
-             trigger: ".sec-5-scroll-wrap",
-             start: "top+=72.5% center",
-             end: "bottom center",
-             scrub: true,
-           }
-         })
-         .from('.usp-ct.four span', {
-           opacity: 0,
-           y: "6rem",
-           stagger: 0.05, // Versatz zwischen den fourn der einzelnen Elemente
-         })
-         .to('.usp-ct.four span', {
-           opacity: 0,
-           y: "-6rem",
-           stagger: 0.05,
-         })
-         .from('.sec-5 .lines-ct .line.four .line-inner', {
-           height: 0,
-         }, 0);
        ///USP Lines Desktop End
        gsap.timeline({
            scrollTrigger: {
