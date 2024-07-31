@@ -190,6 +190,7 @@ document.querySelectorAll('.line-in').forEach((element) => {
 
    barba.hooks.beforeLeave(() => {
      document.querySelector('html').classList.add('is-trans');
+     
    });
    barba.hooks.after(() => {
      document.querySelector('html').classList.remove('is-trans');
@@ -217,12 +218,6 @@ document.querySelectorAll('.line-in').forEach((element) => {
          });
          console.log(`Scrolling to anchor ${targetId}`);
 
-         // Überprüfen, ob das Ziel-Element das Attribut [data-trans-id] enthält
-         if (targetElement.hasAttribute('data-trans-id')) {
-           const offset = window.innerHeight * 0.75; // 75vh Offset
-           window.scrollBy(0, offset);
-           console.log(`Scrolling 75vh down from the top of [data-trans-id] section`);
-         }
 
          return; // Beenden Sie die Funktion, wenn das Scrollen zum Ankerziel erfolgt ist
        }

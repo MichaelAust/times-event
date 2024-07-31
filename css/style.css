@@ -5,6 +5,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Archivo";
+  src: url("../fonts/archivo-v19-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
   font-family: "Archivo SemiExpanded";
   src: url("../fonts/archivo-semiexpanded-extrabold.woff2") format("woff2");
   font-weight: 800;
