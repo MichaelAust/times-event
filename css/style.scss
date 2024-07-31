@@ -898,7 +898,7 @@ h6,
 ////Globals End
 /// Helpers Start
 main .line {
-    body:not(.start) & {
+    .body-sub & {
 
         display: block;
         background-color: $border;
@@ -4005,7 +4005,7 @@ main {
 
 ///Sub pages
 /// 
-.sub-page {
+.body-sub {
     header {
         background-color: $dark;
         position: relative;
@@ -4048,7 +4048,7 @@ main {
         @media (min-width: $large) {
             margin-top: 3.23rem;
         }
-        body.impressum & {
+        .body-impressum & {
             font-size: 13.06rem;
             margin-bottom: 35vh;
             @media (min-width: $large) {
@@ -4056,7 +4056,7 @@ main {
                 margin-bottom: 30vh;
             }
         }
-        body.datenschutzerklaerung & {
+        .body-datenschutzerklaerung & {
             font-size: 9.8rem;
             margin-bottom: 32vh;
             @media (min-width: $large) {

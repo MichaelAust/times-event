@@ -67,8 +67,8 @@
    });
    tl.to(".quickbar", {
      duration: .7,
-     ease: "custom-ease",
-     y: "-100%",
+     ease: "expo.EaseOut",
+     y: "-60%",
      autoAlpha: 0,
    });
    tl.to(".page-transition .transition-overlay:nth-of-type(2)", {
@@ -97,7 +97,7 @@
    }, null, 0);
 
    tl.set(".quickbar", {
-     y: "100%",
+     y: "5em",
      autoAlpha: 0,
    });
 
@@ -126,13 +126,13 @@
   }, 0.1);
    tl.to(".quickbar", {
      duration: 1,
-     y: "0%",
-     ease: "custom-ease",
+     y: "0",
+     ease: "expo.EaseOut",
      autoAlpha: 1,
    }, 0.1);
 
-  if(document.querySelector('.fade-in')) {
-    tl.fromTo(".fade-in", {
+  if(document.querySelector('.claim-fade-in')) {
+    tl.fromTo(".claim-fade-in", {
        y: "60%",
     }, {
       y: "0%",
@@ -151,7 +151,33 @@
       ease: "Expo.easeOut",
       stagger: 0.03,
     }, 0.4);
-  }
+  };
+document.querySelectorAll('.fade-in').forEach((element) => {
+ 
+  tl.fromTo(element, 
+    {
+      y: "5em",
+      opacity: 0,
+    }, 
+    {
+      y: "0",
+      opacity: 1,
+      duration: 1.2,
+      ease: "expo.easeOut",
+    }, 0.3); 
+});
+document.querySelectorAll('.line-in').forEach((element) => {
+ 
+  tl.fromTo(element, 
+    {
+      scaleX: 0,
+    }, 
+    {
+      scaleX: 1,
+      duration: 1.2,
+      ease: "expo.easeOut",
+    }, 0.3); 
+});
 
  }
 
@@ -1356,12 +1382,12 @@
 
        gsap.timeline({
            scrollTrigger: {
-             trigger: "body.start .footer-trigger",
+             trigger: ".body-start .footer-trigger",
              start: "center center",
              toggleActions: "play none none reverse",
            }
          })
-         .to('body.start .footer', {
+         .to('.body-start .footer', {
            zIndex: "1",
          });
 

@@ -656,17 +656,17 @@ h6,
   */
 }
 
-body:not(.start) main .line {
+.body-sub main .line {
   display: block;
   background-color: #4A4A4A;
   width: 100%;
   height: 1px;
 }
-body:not(.start) main .line.standard {
+.body-sub main .line.standard {
   margin: 7.66rem 0;
 }
 @media (min-width: 759px) {
-  body:not(.start) main .line.standard {
+  .body-sub main .line.standard {
     margin: 1.9rem 0;
   }
 }
@@ -3325,31 +3325,31 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   }
 }
 
-.sub-page header {
+.body-sub header {
   background-color: #141414;
   position: relative;
   z-index: 2;
 }
 @media (max-width: 759px) {
-  .sub-page .sub-gradient-wrapper {
+  .body-sub .sub-gradient-wrapper {
     display: none;
   }
 }
-.sub-page .sub-gradient-wrapper .gradient-ct.blue {
+.body-sub .sub-gradient-wrapper .gradient-ct.blue {
   width: 33.59rem;
   position: fixed;
   z-index: 2;
   bottom: -5%;
   left: -10%;
 }
-.sub-page .sub-gradient-wrapper .gradient-ct.pink {
+.body-sub .sub-gradient-wrapper .gradient-ct.pink {
   width: 33.59rem;
   position: fixed;
   z-index: 2;
   bottom: -15%;
   left: 5%;
 }
-.sub-page .footer {
+.body-sub .footer {
   position: fixed;
   z-index: 1;
 }
@@ -3370,22 +3370,22 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
     margin-top: 3.23rem;
   }
 }
-body.impressum .sub-header h1 {
+.body-impressum .sub-header h1 {
   font-size: 13.06rem;
   margin-bottom: 35vh;
 }
 @media (min-width: 759px) {
-  body.impressum .sub-header h1 {
+  .body-impressum .sub-header h1 {
     font-size: 7.03rem;
     margin-bottom: 30vh;
   }
 }
-body.datenschutzerklaerung .sub-header h1 {
+.body-datenschutzerklaerung .sub-header h1 {
   font-size: 9.8rem;
   margin-bottom: 32vh;
 }
 @media (min-width: 759px) {
-  body.datenschutzerklaerung .sub-header h1 {
+  .body-datenschutzerklaerung .sub-header h1 {
     font-size: 6.51rem;
     margin-bottom: 25vh;
   }
