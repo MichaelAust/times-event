@@ -164,8 +164,16 @@ html {
     @extend %animated-transform;
 }
 
-html.open-navi {
-    overflow: hidden;
+html {
+    &.open-navi {
+        overflow: hidden;
+
+    }
+    &.is-trans {
+        #navigation, #navigation *, .navi-overlay, .navi-overlay:before {
+            transition: none!important;
+        }
+    }
 }
 
 body,
@@ -3520,7 +3528,12 @@ main {
         margin-top: $base-font-size;
         // opacity: .75;
         color: $light;
-
+        @extend %animated-transform;
+        @media (max-width: $large) {
+            &.small {
+                margin-top: $base-font-size * 5;
+            }
+        }
         @media (min-width: $large) {
             margin-top: 1.46rem;
         }
@@ -4051,13 +4064,15 @@ main {
         padding-top: 5.68rem;
     }
     h1 {
-        margin-top: calc(17.78rem / 2);
+        // margin-top: calc(17.78rem / 2);
+        margin-top: 20vh;
         @media (min-width: $large) {
             margin-top: 3.23rem;
         }
         .body-impressum & {
             font-size: 13.06rem;
-            margin-bottom: 35vh;
+            // margin-bottom: 35vh;
+            margin-bottom: 20vh;
             @media (min-width: $large) {
                 font-size: 7.03rem;
                 margin-bottom: 30vh;
@@ -4065,7 +4080,7 @@ main {
         }
         .body-datenschutzerklaerung & {
             font-size: 9.8rem;
-            margin-bottom: 32vh;
+            margin-bottom: 20vh;
             @media (min-width: $large) {
                 font-size:6.51rem;
                 margin-bottom: 25vh;

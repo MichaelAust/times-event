@@ -64,7 +64,7 @@ html.lenis {
 }
 
 .footer .footer-links-ct .mail .circle .copy-info,
-.footer .footer-links-ct .phone .circle .copy-info, main .reviewsSwiperDesktopCt .text-col .swiper-slide:not(.swiper-slide-active) .text-ct, main .sec-6 .reviewsSwiperMobile .finger, html, .btn {
+.footer .footer-links-ct .phone .circle .copy-info, .footer .footer-infos-ct, main .reviewsSwiperDesktopCt .text-col .swiper-slide:not(.swiper-slide-active) .text-ct, main .sec-6 .reviewsSwiperMobile .finger, html, .btn {
   transition: 0.3s ease;
 }
 
@@ -124,6 +124,9 @@ html {
 
 html.open-navi {
   overflow: hidden;
+}
+html.is-trans #navigation, html.is-trans #navigation *, html.is-trans .navi-overlay, html.is-trans .navi-overlay:before {
+  transition: none !important;
 }
 
 body,
@@ -2882,6 +2885,11 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   margin-top: 3.83rem;
   color: #F2F2F2;
 }
+@media (max-width: 759px) {
+  .footer .footer-infos-ct.small {
+    margin-top: 19.15rem;
+  }
+}
 @media (min-width: 759px) {
   .footer .footer-infos-ct {
     margin-top: 1.46rem;
@@ -3369,7 +3377,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
   }
 }
 .sub-header h1 {
-  margin-top: 8.89rem;
+  margin-top: 20vh;
 }
 @media (min-width: 759px) {
   .sub-header h1 {
@@ -3378,7 +3386,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 .body-impressum .sub-header h1 {
   font-size: 13.06rem;
-  margin-bottom: 35vh;
+  margin-bottom: 20vh;
 }
 @media (min-width: 759px) {
   .body-impressum .sub-header h1 {
@@ -3388,7 +3396,7 @@ main .reviewsSwiperDesktopCt .swiper-buttons-ct .swiper-button-next {
 }
 .body-datenschutzerklaerung .sub-header h1 {
   font-size: 9.8rem;
-  margin-bottom: 32vh;
+  margin-bottom: 20vh;
 }
 @media (min-width: 759px) {
   .body-datenschutzerklaerung .sub-header h1 {

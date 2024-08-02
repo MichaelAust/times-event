@@ -193,8 +193,10 @@ document.querySelectorAll('.line-in').forEach((element) => {
      
    });
    barba.hooks.after(() => {
-     document.querySelector('html').classList.remove('is-trans');
-   });
+    setTimeout(() => {
+      document.querySelector('html').classList.remove('is-trans');
+    }, 700);
+  });
 
    barba.hooks.afterEnter(() => {
      // Scrollen Sie zum Seitenanfang, wenn keine interne Verlinkung vorliegt
@@ -343,6 +345,7 @@ document.querySelectorAll('.line-in').forEach((element) => {
    followCursor();
    clipboardCopy();
    orientationCheck();
+   checkUrlBar();
  }
 
 
@@ -1215,23 +1218,35 @@ document.querySelectorAll('.line-in').forEach((element) => {
          .to('.index-header .claim', {
            y: "75%",
          });
-       gsap.timeline({
-           scrollTrigger: {
-             trigger: ".sec-1",
-             start: "top bottom",
-             end: "center top",
-             scrub: 0.1,
-           }
-         })
-         .from('.sec-1 .wenn-ct ', {
-           x: "-5%",
-         }, 0)
-         .from('.sec-1 .wenn-ct span:nth-of-type(2)', {
-           paddingLeft: 0,
-         }, 0)
-         .from('.sec-1 .wenn-ct span:nth-of-type(3)', {
-           paddingLeft: 0,
-         }, 0)
+         gsap.from(".sec-1 .wenn-ct span", {
+          x: "-20%",
+          opacity: 0,
+          duration: 2.5,
+          ease: "Expo.easeOut",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: ".sec-1 .wenn-ct",
+            start: () => 'top ' + window.innerHeight * 0.9,
+            toggleActions: "play none none reverse",
+          }
+        });
+      //  gsap.timeline({
+      //      scrollTrigger: {
+      //        trigger: ".sec-1",
+      //        start: "top bottom",
+      //        end: "center top",
+      //        scrub: 0.1,
+      //      }
+      //    })
+      //    .from('.sec-1 .wenn-ct ', {
+      //      x: "-5%",
+      //    }, 0)
+      //    .from('.sec-1 .wenn-ct span:nth-of-type(2)', {
+      //      paddingLeft: 0,
+      //    }, 0)
+      //    .from('.sec-1 .wenn-ct span:nth-of-type(3)', {
+      //      paddingLeft: 0,
+      //    }, 0)
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-2-scroll-wrap",
@@ -1714,3 +1729,22 @@ document.querySelectorAll('.line-in').forEach((element) => {
     resizeTimeout = setTimeout(reloadOnResize, 500);
   });
 })();
+
+
+function checkUrlBar() {
+  if (window.innerWidth <= 760) {
+    const footerElement = document.querySelector('.footer-infos-ct');
+    const viewportHeight = window.innerHeight;
+    const documentHeight = document.documentElement.clientHeight;
+
+    // Umgekehrte Logik basierend auf deinen Beobachtungen
+    if (viewportHeight > documentHeight) {
+      footerElement.classList.remove('small');
+    } else {
+      footerElement.classList.add('small');
+    }
+    window.addEventListener('resize', checkUrlBar);
+
+  }
+  }
+
