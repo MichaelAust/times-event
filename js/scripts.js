@@ -187,7 +187,6 @@ document.querySelectorAll('.line-in').forEach((element) => {
 
    history.scrollRestoration = "manual";
 
-
    barba.hooks.beforeLeave(() => {
      document.querySelector('html').classList.add('is-trans');
      
@@ -237,9 +236,9 @@ document.querySelectorAll('.line-in').forEach((element) => {
        return el.tagName === 'A' && el.getAttribute('href').startsWith('#');
      },
      sync: true,
-     debug: true,
      timeout: 7000,
-     transitions: [{
+     transitions: [
+      {
          name: 'self',
          async leave(data) {
            pageTransitionIn(data.current);
@@ -1393,7 +1392,7 @@ document.querySelectorAll('.line-in').forEach((element) => {
        gsap.timeline({
            scrollTrigger: {
              trigger: ".body-start .footer-trigger",
-             start: "center center",
+             start: "top bottom",
              toggleActions: "play none none reverse",
            }
          })
