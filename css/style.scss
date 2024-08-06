@@ -419,77 +419,6 @@ ol {
 
 }
 
-// .back-to-top {
-//     position: fixed;
-//     bottom: $base-gap;
-//     right: $base-gap;
-//     z-index: 1001;
-//     font-size: 1rem;
-//     width: 14rem;
-//     height: 14rem;
-//     text-decoration: none;
-//     text-align: center;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     mix-blend-mode: difference;
-
-//     @media (min-width: $large) {
-//         width: 3.3rem;
-//         height: 3.3rem;
-//         bottom: $large-base-gap;
-//         right: $large-base-gap;
-//     }
-
-//     &:hover {
-//         .circle {
-//             transform: scale(1.1);
-//         }
-//     }
-
-//     body:not(.scrolling-up) &,
-//     html:not(.fixed) &,
-//     html.open-navi & {
-//         pointer-events: none;
-
-//         .circle {
-//             opacity: 0;
-//             visibility: hidden;
-//             transform: scale(0);
-//         }
-
-//         .arrow {
-//             opacity: 0;
-//             visibility: hidden;
-//             transform: scale(0);
-//         }
-
-
-//     }
-
-//     .arrow {
-//         position: absolute;
-//         margin: 0;
-//         inset: auto;
-//         width: 15%;
-//         @extend %animated-transform;
-//         z-index: 3;
-//         mix-blend-mode: difference;
-
-//     }
-
-//     .circle {
-//         @extend %animated-transform;
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         margin: 0;
-//         inset: auto;
-//         background-color: $light;
-//         border-radius: 100%;
-//     }
-
-// }
 
 
 .col {
@@ -1511,35 +1440,6 @@ $large-branding-width: 3.18rem;
                         }
                     }
 
-                    // html.open-navi & {
-                    //     $transition-delay-step: 0.05s; // Zeitintervall zwischen den Transition-Delay-Werten
-
-                    //     @for $i from 0 through 10 {
-
-                    //         // Du kannst die Obergrenze anpassen oder entfernen
-                    //         &:nth-child(#{$i}) {
-                    //             transition-delay: $transition-delay-step * ($i - 1);
-                    //         }
-                    //     }
-                    // }
-
-                    // html.fixed & {
-                    //     $transition-delay-step: 0.05s; // Zeitintervall zwischen den Transition-Delay-Werten
-
-                    //     @for $i from 0 through 10 {
-
-                    //         // Du kannst die Obergrenze anpassen oder entfernen
-                    //         &:nth-child(#{$i}) {
-                    //             transition-delay: $transition-delay-step * ($i - 1);
-                    //         }
-                    //     }
-                    // }
-
-                    // html.fixed &,
-                    // html.open-navi & {
-                    //     transform: translateY(-100%);
-                    // }
-
 
                     a,
                     .a {
@@ -1568,23 +1468,6 @@ $large-branding-width: 3.18rem;
                             }
                         }
 
-                        // >span {
-                        //     display: flex;
-                        //     $transition-delay-step: 0.05s; // Zeitintervall zwischen den Transition-Delay-Werten
-
-                        //     span {
-                        //         @extend %animated-transform-inout;
-
-                        //         @for $i from 0 through 10 {
-
-                        //             // Du kannst die Obergrenze anpassen oder entfernen
-                        //             &:nth-child(#{$i}) {
-                        //                 transition-delay: $transition-delay-step * ($i - 1);
-
-                        //             }
-                        //         }
-                        //     }
-                        // }
                     }
 
                     &.kontakt {
@@ -1983,11 +1866,6 @@ $large-branding-width: 3.18rem;
 
                 nav {
                     ul {
-                        // &:hover {
-                        //     a {
-                        //         opacity: .5;
-                        //     }
-                        // }
                         display: flex;
                         flex-flow: column;
                         gap: 2.73rem;
@@ -1999,7 +1877,6 @@ $large-branding-width: 3.18rem;
 
                             @for $i from 0 through 10 {
 
-                                // Du kannst die Obergrenze anpassen oder entfernen
                                 &:nth-child(#{$i}) {
                                     a {
                                         html.open-navi & {
@@ -2469,25 +2346,18 @@ main {
         }
 
         .bg-imgs-ct {
-            // column-count: 2;
             display: flex;
             gap: $base-gap;
             align-items: center;
             position: absolute;
-            // position: fixed;
             top: 0;
             left: 0;
             right: 0;
             width: 100%;
             height: 100vh;
             transform: scale(1);
-            // padding-inline: $base-gap;
             transform-origin: center;
             z-index: -3;
-
-            // &.fixed-sec {
-            //     display: none;
-            // }
 
             @media (min-width: $large) {
                 gap: $large-base-gap;
@@ -4098,12 +3968,6 @@ main {
         }
     }
     .impressum-infos {
-        // font-family: $serif-font-display;
-        // font-size: 5.28rem;
-        // font-style: italic;
-        // @media (min-width: $large) {
-        //     font-size: 1.35rem;
-        // }
         .category {
             color: $text;
             hyphens: auto;

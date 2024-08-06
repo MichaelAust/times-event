@@ -1229,23 +1229,6 @@ document.querySelectorAll('.line-in').forEach((element) => {
             toggleActions: "play none none reverse",
           }
         });
-      //  gsap.timeline({
-      //      scrollTrigger: {
-      //        trigger: ".sec-1",
-      //        start: "top bottom",
-      //        end: "center top",
-      //        scrub: 0.1,
-      //      }
-      //    })
-      //    .from('.sec-1 .wenn-ct ', {
-      //      x: "-5%",
-      //    }, 0)
-      //    .from('.sec-1 .wenn-ct span:nth-of-type(2)', {
-      //      paddingLeft: 0,
-      //    }, 0)
-      //    .from('.sec-1 .wenn-ct span:nth-of-type(3)', {
-      //      paddingLeft: 0,
-      //    }, 0)
        gsap.timeline({
            scrollTrigger: {
              trigger: ".sec-2-scroll-wrap",
@@ -1746,4 +1729,3 @@ function checkUrlBar() {
 
   }
   }
-
